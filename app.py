@@ -29,4 +29,5 @@ df = SmartDataframe(data, config={"llm": llm})
 st.write(df.chat("cuenta la cantidad de registros"))
 
 consulta = st.text_input('Ingrese consulta')
-st.write(df.chat("lista la tabla ordenada alfabeticamente por nombre"))
+st.write("Por ejemplo: lista la tabla ordenada alfabeticamente por nombre")
+st.write(df.chat(consulta))
