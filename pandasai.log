@@ -903,3 +903,5020 @@ result = {'type': 'dataframe', 'value': df_sorted}
 
 [2823 rows x 18 columns]}
 2024-08-30 17:20:01 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:23:20 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:23:21 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:23:21 [INFO] Prompt ID: 39b15319-f9a6-4bb3-9a4e-c2340c619157
+2024-08-30 17:23:21 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:23:21 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:23:21 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:23:21 [INFO] Using cached response
+2024-08-30 17:23:21 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:23:21 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:23:21 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:23:21 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:23:21 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:23:21 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:23:21 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:23:21 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:23:21 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:23:21 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:23:21 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:23:21 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:23:21 [INFO] Question: 
+2024-08-30 17:23:21 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:23:21 [INFO] Prompt ID: 72213cd0-4cb6-4b85-868e-7ffc9ef5bfd5
+2024-08-30 17:23:21 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:23:21 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:23:21 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:23:21 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:23:21 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,49887189
+      - -58,42728312
+      - -58,36747105
+    - name: lat
+      type: object
+      samples:
+      - -34,61608204
+      - -34,5654664
+      - -34,59811292
+    - name: id
+      type: int64
+      samples:
+      - 1030
+      - 2071
+      - 926
+    - name: nombre
+      type: object
+      samples:
+      - LA OBRA
+      - CAFE AZNAR
+      - SORRENTO
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - PUB
+      - SANDWICHERIA
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - VEGETARIANA
+      - ITALIANA
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - TAILANDESA
+      - AUTOS
+    - name: telefono
+      type: object
+      samples:
+      - 4687 5008
+      - 4588 1194
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - wi5c-q1o@protonmail.com
+      - 66gxfp73n4@icloud.com
+      - erc7dx30n7@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 12 a 15.30 y de 20 a 1
+      - lunes a viernes de 8.30 a 17.30
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - MENDOZA
+      - CASEROS
+      - ALVAREZ JULIAN
+    - name: calle_altura
+      type: int64
+      samples:
+      - 568
+      - 5890
+      - 6700
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - posadas
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - DON PEDRO DE MENDOZA AV. 1459
+      - YRIGOYEN, HIPOLITO 3002
+    - name: barrio
+      type: object
+      samples:
+      - Villa Pueyrredon
+      - "Nu\xC3\u0192\xC2\xB1ez"
+      - Barracas
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 3
+      - Comuna 6
+      - Comuna 5
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1169.0
+      - .nan
+      - 1160.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1102ABB
+      - C1055AAB
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:23:21 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:23:23 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:23:23 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,49887189
+      - -58,42728312
+      - -58,36747105
+    - name: lat
+      type: object
+      samples:
+      - -34,61608204
+      - -34,5654664
+      - -34,59811292
+    - name: id
+      type: int64
+      samples:
+      - 1030
+      - 2071
+      - 926
+    - name: nombre
+      type: object
+      samples:
+      - LA OBRA
+      - CAFE AZNAR
+      - SORRENTO
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - PUB
+      - SANDWICHERIA
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - VEGETARIANA
+      - ITALIANA
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - TAILANDESA
+      - AUTOS
+    - name: telefono
+      type: object
+      samples:
+      - 4687 5008
+      - 4588 1194
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - wi5c-q1o@protonmail.com
+      - 66gxfp73n4@icloud.com
+      - erc7dx30n7@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 12 a 15.30 y de 20 a 1
+      - lunes a viernes de 8.30 a 17.30
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - MENDOZA
+      - CASEROS
+      - ALVAREZ JULIAN
+    - name: calle_altura
+      type: int64
+      samples:
+      - 568
+      - 5890
+      - 6700
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - posadas
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - DON PEDRO DE MENDOZA AV. 1459
+      - YRIGOYEN, HIPOLITO 3002
+    - name: barrio
+      type: object
+      samples:
+      - Villa Pueyrredon
+      - "Nu\xC3\u0192\xC2\xB1ez"
+      - Barracas
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 3
+      - Comuna 6
+      - Comuna 5
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1169.0
+      - .nan
+      - 1160.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1102ABB
+      - C1055AAB
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:23:23 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Declare dfs variable
+dfs = [
+pd.DataFrame({
+'long': [-58.49887189, -58.42728312, -58.36747105],
+'lat': [-34.61608204, -34.5654664, -34.59811292],
+'id': [1030, 2071, 926],
+'nombre': ['LA OBRA', 'CAFE AZNAR', 'SORRENTO'],
+'categoria': [None, 'PUB', 'SANDWICHERIA'],
+'cocina': [None, 'VEGETARIANA', 'ITALIANA'],
+'ambientacion': [None, 'TAILANDESA', 'AUTOS'],
+'telefono': ['4687 5008', '4588 1194', None],
+'mail': ['wi5c-q1o@protonmail.com', '66gxfp73n4@icloud.com', 'erc7dx30n7@yahoo.com'],
+'horario': ['lunes a domingo de 12 a 15.30 y de 20 a 1', 'lunes a viernes de 8.30 a 17.30', None],
+'calle_nombre': ['MENDOZA', 'CASEROS', 'ALVAREZ JULIAN'],
+'calle_altura': [568, 5890, 6700],
+'calle_cruce': [None, 'posadas', 'DONADO'],
+'direccion_completa': [None, 'DON PEDRO DE MENDOZA AV. 1459', 'YRIGOYEN, HIPOLITO 3002'],
+'barrio': ['Villa Pueyrredon', 'Nu�ez', 'Barracas'],
+'comuna': ['Comuna 3', 'Comuna 6', 'Comuna 5'],
+'codigo_postal': [1169.0, None, 1160.0],
+'codigo_postal_argentino': ['C1102ABB', 'C1055AAB', None]
+})]
+
+# Write code here
+number_of_records = len(dfs[0])
+
+# Declare result var
+result = {
+"type": "number",
+"value": number_of_records
+}
+            ```
+            
+2024-08-30 17:23:23 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:23:23 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:23:23 [INFO] 
+Code running:
+```
+number_of_records = len(dfs[0])
+result = {'type': 'number', 'value': number_of_records}
+        ```
+2024-08-30 17:23:23 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:23:23 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:23:23 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:23:23 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:31:41 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:31:41 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:31:41 [INFO] Prompt ID: ae3e3e69-9b3c-4f46-969a-fa9bcc709d25
+2024-08-30 17:31:41 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:31:41 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:31:41 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:31:41 [INFO] Using cached response
+2024-08-30 17:31:41 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:31:41 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:31:41 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:31:41 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:31:41 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:31:41 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:31:42 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:31:42 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:31:42 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:31:42 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:31:42 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:31:42 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:31:51 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:31:51 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:31:51 [INFO] Prompt ID: 59887e23-46bf-49c9-a726-e0221f453270
+2024-08-30 17:31:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:31:51 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:31:51 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:31:51 [INFO] Using cached response
+2024-08-30 17:31:51 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:31:51 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:31:51 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:31:51 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:31:51 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:31:51 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:31:51 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:31:51 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:31:51 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:31:51 [INFO] Question: lista la tabla ordenada alfabeticamente por nombre
+2024-08-30 17:31:51 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:31:51 [INFO] Prompt ID: 4786321d-6359-4d36-909b-3622c0de17c6
+2024-08-30 17:31:51 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:31:51 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:31:51 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:31:51 [INFO] Using cached response
+2024-08-30 17:31:51 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:31:51 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:31:51 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:31:51 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:31:51 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:31:51 [INFO] 
+Code running:
+```
+df = dfs[0]
+df_sorted = df.sort_values(by='nombre')
+result = {'type': 'dataframe', 'value': df_sorted}
+        ```
+2024-08-30 17:31:51 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:31:52 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:31:52 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+5     -58,42226235   -34,5718432     3        4 X 4 CAFE  ...        Palermo  Comuna 14        1425.0                C1425ABY
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2817  -58,37390199  -34,60168838  2545          ZEPELLIN  ...    San Nicolas   Comuna 1        1004.0                C1004AAK
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+
+[2823 rows x 18 columns]}
+2024-08-30 17:31:52 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:33:38 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:33:38 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:33:38 [INFO] Prompt ID: 3e5c50e0-0e9b-4e32-a55c-4d9e63f0f70d
+2024-08-30 17:33:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:33:38 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:33:38 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:33:38 [INFO] Using cached response
+2024-08-30 17:33:38 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:33:38 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:33:38 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:33:38 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:33:38 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:33:38 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:33:38 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:33:38 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:33:38 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:33:38 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:33:38 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:33:38 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:33:38 [INFO] Question: cuantos son restaurantes?
+2024-08-30 17:33:38 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:33:38 [INFO] Prompt ID: f984ef13-2169-467a-8791-f6dea85ce592
+2024-08-30 17:33:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:33:38 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:33:38 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:33:38 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:33:38 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39204321
+      - -58,3897753
+      - -58,42688227
+    - name: lat
+      type: object
+      samples:
+      - -34,60052261
+      - -34,60204551
+      - -34,60065763
+    - name: id
+      type: int64
+      samples:
+      - 726
+      - 2459
+      - 694
+    - name: nombre
+      type: object
+      samples:
+      - AMAKAI
+      - WINNER
+      - PRAGA
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - .nan
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - CHINA
+      - .nan
+      - PATAGONICA
+    - name: ambientacion
+      type: object
+      samples:
+      - GRIEGA
+      - BRASILERA
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - 4302 3719
+      - 4328 8615
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - www.organizacionoja.com
+      - .nan
+      - www.ilfratello.go.to
+    - name: horario
+      type: object
+      samples:
+      - lunes a viernes de 8 a 19.30
+      - lunes a lunes de 20 a 16 y de 20 a 00
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - Camargo
+      - ARENALES
+      - GURRUCHAGA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 5207
+      - 207
+      - 1833
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - DONADO
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - MEXICO 536
+      - PAEZ 2900
+    - name: barrio
+      type: object
+      samples:
+      - Palermo
+      - Villa Gral. Mitre
+      - Versalles
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 1
+      - Comuna 14
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1092.0
+      - 1056.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1405BCM
+      - C1426DZD
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuantos son restaurantes?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:33:38 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:33:39 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:33:39 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39204321
+      - -58,3897753
+      - -58,42688227
+    - name: lat
+      type: object
+      samples:
+      - -34,60052261
+      - -34,60204551
+      - -34,60065763
+    - name: id
+      type: int64
+      samples:
+      - 726
+      - 2459
+      - 694
+    - name: nombre
+      type: object
+      samples:
+      - AMAKAI
+      - WINNER
+      - PRAGA
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - .nan
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - CHINA
+      - .nan
+      - PATAGONICA
+    - name: ambientacion
+      type: object
+      samples:
+      - GRIEGA
+      - BRASILERA
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - 4302 3719
+      - 4328 8615
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - www.organizacionoja.com
+      - .nan
+      - www.ilfratello.go.to
+    - name: horario
+      type: object
+      samples:
+      - lunes a viernes de 8 a 19.30
+      - lunes a lunes de 20 a 16 y de 20 a 00
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - Camargo
+      - ARENALES
+      - GURRUCHAGA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 5207
+      - 207
+      - 1833
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - DONADO
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - MEXICO 536
+      - PAEZ 2900
+    - name: barrio
+      type: object
+      samples:
+      - Palermo
+      - Villa Gral. Mitre
+      - Versalles
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 1
+      - Comuna 14
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1092.0
+      - 1056.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1405BCM
+      - C1426DZD
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuantos son restaurantes?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:33:39 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Assuming dfs is a list of dataframes and each dataframe has a column named 'categoria'
+restaurant_count = 0
+for df in dfs:
+    restaurant_count += len(df[df['categoria'] == 'RESTAURANT'])
+
+# Declare result var: 
+result = {
+    "type": "number",
+    "value": restaurant_count
+}
+            ```
+            
+2024-08-30 17:33:39 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:33:39 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:33:39 [INFO] 
+Code running:
+```
+restaurant_count = 0
+for df in dfs:
+    restaurant_count += len(df[df['categoria'] == 'RESTAURANT'])
+result = {'type': 'number', 'value': restaurant_count}
+        ```
+2024-08-30 17:33:39 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:33:40 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:33:40 [INFO] Answer: {'type': 'number', 'value': 0}
+2024-08-30 17:33:40 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:33:49 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:33:49 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:33:49 [INFO] Prompt ID: 6dd1f39d-2288-457e-9f7a-fe28852408d1
+2024-08-30 17:33:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:33:49 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:33:49 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:33:49 [INFO] Using cached response
+2024-08-30 17:33:49 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:33:49 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:33:49 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:33:49 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:33:49 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:33:49 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:33:49 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:33:49 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:33:49 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:33:49 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:33:49 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:33:49 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:33:49 [INFO] Question: cuantos son restaurante?
+2024-08-30 17:33:49 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:33:49 [INFO] Prompt ID: 317e18c4-35d2-4f46-bb5d-37a9ba22462e
+2024-08-30 17:33:49 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:33:49 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:33:49 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:33:49 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:33:49 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,37605858
+      - -58,3787283
+      - -58,37391174
+    - name: lat
+      type: object
+      samples:
+      - -34,58165061
+      - -34,61287151
+      - -34,60061063
+    - name: id
+      type: int64
+      samples:
+      - 219
+      - 2097
+      - 1013
+    - name: nombre
+      type: object
+      samples:
+      - EL GUARANI
+      - LA CONTINENTAL PIZZERIA
+      - ALMACEN NATURISTA
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CONFITERIA
+      - VINERIA
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - SUSHI
+      - MARISCOS
+    - name: ambientacion
+      type: object
+      samples:
+      - ELEGANTE
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - 4815 3359
+      - 4334 3711
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - _vfbhfz@icloud.com
+      - x05jfyc5n4m@yahoo.com
+      - cmbgzbu@hotmail.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 7 a 00
+      - "lunes a jueves de 6 a 00 - viernes y s\xE1bado de 1 a 00"
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - "Nogoy\xC3\u0192\xC2\xA1"
+      - LACROZE FEDERICO
+      - PACHECO DE MELO JOSE ANDRES
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1280
+      - 182
+      - 335
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - posadas
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - HONDURAS 5710
+      - .nan
+      - ALVAREZ, DONATO, Tte. Gral. AV. 2080
+    - name: barrio
+      type: object
+      samples:
+      - Villa Lugano
+      - Retiro
+      - Recoleta
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 13
+      - Comuna 5
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1137.0
+      - 1115.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1143AAA
+      - C1414DID
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuantos son restaurante?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:33:49 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:33:50 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:33:50 [ERROR] Pipeline failed on step 3: No code found in the response
+2024-08-30 17:34:12 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:34:12 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:34:12 [INFO] Prompt ID: ff35fd7e-bbaa-4dc6-a8d4-e69f8dc385e4
+2024-08-30 17:34:12 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:34:12 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:34:12 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:34:12 [INFO] Using cached response
+2024-08-30 17:34:12 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:34:12 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:34:12 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:34:12 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:34:12 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:34:12 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:34:12 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:34:12 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:34:12 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:34:12 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:34:12 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:34:12 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:34:12 [INFO] Question: cuantos son categoria restaurant?
+2024-08-30 17:34:12 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:34:12 [INFO] Prompt ID: 9e9eb8d0-5517-4eae-9aec-ea3840fdd3a5
+2024-08-30 17:34:12 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:34:12 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:34:12 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:34:12 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:34:12 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,44942476
+      - -58,3939362
+      - -58,49940968
+    - name: lat
+      type: object
+      samples:
+      - -34,58533068
+      - -34,6059979
+      - -34,59993928
+    - name: id
+      type: int64
+      samples:
+      - 474
+      - 2182
+      - 2588
+    - name: nombre
+      type: object
+      samples:
+      - LA PERGOLA
+      - QUIJOTE PIZZA CAFE
+      - CONFITERIA LA FAMILIA
+    - name: categoria
+      type: object
+      samples:
+      - BAR
+      - SANDWICHERIA
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - SUSHI
+      - DE AUTOR
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - BRASILERA
+      - .nan
+      - PSICODELICO
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4342 4328
+      - 4334 0355
+    - name: mail
+      type: object
+      samples:
+      - .nan
+      - cocilu@hotmail.com
+      - mangia_smisoso@hotmail.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 8 a 22
+      - .nan
+      - "lunes y mi\xE9rcoles a domingo de 12 a 16 y de 20 al cierre"
+    - name: calle_nombre
+      type: object
+      samples:
+      - SAENZ AV
+      - CHARLONE
+      - RIOBAMBA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1805
+      - 2507
+      - 584
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - JUSTO, JUAN B
+      - posadas
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - CABRERA, JOSE A. 3602
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Lugano
+      - Almagro
+      - Velez Sarsfield
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 14
+      - Comuna 11
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1090.0
+      - 1088.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1416DLB
+      - C1036AAN
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuantos son categoria restaurant?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:34:12 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:34:13 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:34:13 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,44942476
+      - -58,3939362
+      - -58,49940968
+    - name: lat
+      type: object
+      samples:
+      - -34,58533068
+      - -34,6059979
+      - -34,59993928
+    - name: id
+      type: int64
+      samples:
+      - 474
+      - 2182
+      - 2588
+    - name: nombre
+      type: object
+      samples:
+      - LA PERGOLA
+      - QUIJOTE PIZZA CAFE
+      - CONFITERIA LA FAMILIA
+    - name: categoria
+      type: object
+      samples:
+      - BAR
+      - SANDWICHERIA
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - SUSHI
+      - DE AUTOR
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - BRASILERA
+      - .nan
+      - PSICODELICO
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4342 4328
+      - 4334 0355
+    - name: mail
+      type: object
+      samples:
+      - .nan
+      - cocilu@hotmail.com
+      - mangia_smisoso@hotmail.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 8 a 22
+      - .nan
+      - "lunes y mi\xE9rcoles a domingo de 12 a 16 y de 20 al cierre"
+    - name: calle_nombre
+      type: object
+      samples:
+      - SAENZ AV
+      - CHARLONE
+      - RIOBAMBA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1805
+      - 2507
+      - 584
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - JUSTO, JUAN B
+      - posadas
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - CABRERA, JOSE A. 3602
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Lugano
+      - Almagro
+      - Velez Sarsfield
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 14
+      - Comuna 11
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1090.0
+      - 1088.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1416DLB
+      - C1036AAN
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuantos son categoria restaurant?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:34:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Assign the dataframe to the first element of the list `dfs`
+df = dfs[0]
+
+# Count the number of records where the category is "restaurant"
+num_restaurants = df['categoria'].value_counts()['restaurant']
+
+# Declare result var
+result = {
+    "type": "number",
+    "value": num_restaurants
+}
+            ```
+            
+2024-08-30 17:34:13 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:34:14 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:34:14 [INFO] 
+Code running:
+```
+df = dfs[0]
+num_restaurants = df['categoria'].value_counts()['restaurant']
+result = {'type': 'number', 'value': num_restaurants}
+        ```
+2024-08-30 17:34:14 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:34:16 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'restaurant'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\series.py", line 1040, in __getitem__
+    return self._get_value(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\series.py", line 1156, in _get_value
+    loc = self.index.get_loc(label)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'restaurant'
+
+2024-08-30 17:34:16 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-30 17:34:16 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:34:16 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:34:16 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,44942476
+      - -58,3939362
+      - -58,49940968
+    - name: lat
+      type: object
+      samples:
+      - -34,58533068
+      - -34,6059979
+      - -34,59993928
+    - name: id
+      type: int64
+      samples:
+      - 474
+      - 2182
+      - 2588
+    - name: nombre
+      type: object
+      samples:
+      - LA PERGOLA
+      - QUIJOTE PIZZA CAFE
+      - CONFITERIA LA FAMILIA
+    - name: categoria
+      type: object
+      samples:
+      - BAR
+      - SANDWICHERIA
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - SUSHI
+      - DE AUTOR
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - BRASILERA
+      - .nan
+      - PSICODELICO
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4342 4328
+      - 4334 0355
+    - name: mail
+      type: object
+      samples:
+      - .nan
+      - cocilu@hotmail.com
+      - mangia_smisoso@hotmail.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 8 a 22
+      - .nan
+      - "lunes y mi\xE9rcoles a domingo de 12 a 16 y de 20 al cierre"
+    - name: calle_nombre
+      type: object
+      samples:
+      - SAENZ AV
+      - CHARLONE
+      - RIOBAMBA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1805
+      - 2507
+      - 584
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - JUSTO, JUAN B
+      - posadas
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - CABRERA, JOSE A. 3602
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Lugano
+      - Almagro
+      - Velez Sarsfield
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 14
+      - Comuna 11
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1090.0
+      - 1088.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1416DLB
+      - C1036AAN
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ cuantos son categoria restaurant?
+
+You generated this python code:
+df = dfs[0]
+num_restaurants = df['categoria'].value_counts()['restaurant']
+result = {'type': 'number', 'value': num_restaurants}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'restaurant'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 2, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\series.py", line 1040, in __getitem__
+    return self._get_value(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\series.py", line 1156, in _get_value
+    loc = self.index.get_loc(label)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'restaurant'
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:34:16 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:34:17 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:34:17 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-08-30 17:34:17 [ERROR] Pipeline failed on step 6: No code found in the response
+2024-08-30 17:34:42 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:34:42 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:34:42 [INFO] Prompt ID: 68d178d7-b076-4301-83d3-6d37acfe2dbe
+2024-08-30 17:34:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:34:42 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:34:42 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:34:42 [INFO] Using cached response
+2024-08-30 17:34:42 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:34:42 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:34:42 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:34:42 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:34:42 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:34:42 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:34:42 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:34:42 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:34:42 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:34:42 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:34:42 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:34:42 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:34:42 [INFO] Question:  lista la tabla ordenada alfabeticamente por nombre
+2024-08-30 17:34:42 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:34:42 [INFO] Prompt ID: be4d5080-99f0-4b47-a382-1102ce82abb6
+2024-08-30 17:34:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:34:42 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:34:42 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:34:42 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:34:42 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,43142162
+      - -58,39451155
+      - -58,43944382
+    - name: lat
+      type: object
+      samples:
+      - -34,58599997
+      - -34,6065755
+      - -34,62916989
+    - name: id
+      type: int64
+      samples:
+      - 1914
+      - 1270
+      - 911
+    - name: nombre
+      type: object
+      samples:
+      - TON & SON
+      - BAR CANDY
+      - LAS VIOLETAS
+    - name: categoria
+      type: object
+      samples:
+      - RESTAURANTE
+      - .nan
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - GRIEGA
+      - BOLIVIANA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - MEXICANO
+      - "HIST\xD3RICA"
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4815 3359
+      - 4301 7770
+    - name: mail
+      type: object
+      samples:
+      - s87j5siw@protonmail.com
+      - af9jbtg5jx@protonmail.com
+      - adjwtd6k3@outlook.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a viernes de 8 a 17
+      - .nan
+      - lunes a domingo de 12 a 16 y de 19 al cierre
+    - name: calle_nombre
+      type: object
+      samples:
+      - PUEYRREDON AV
+      - YRIGOYEN HIPOLITO
+      - AVELLANEDA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 304
+      - 3
+      - 1368
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - ALCORTA
+      - JUSTO, JUAN B
+    - name: direccion_completa
+      type: object
+      samples:
+      - BOUCHARD 474
+      - SANTA FE AV. 3954
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Belgrano
+      - Flores
+      - Colegiales
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 8
+      - Comuna 9
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1135.0
+      - 1133.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1107AFP
+      - C1225AAM
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+  lista la tabla ordenada alfabeticamente por nombre
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:34:42 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:34:43 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:34:43 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,43142162
+      - -58,39451155
+      - -58,43944382
+    - name: lat
+      type: object
+      samples:
+      - -34,58599997
+      - -34,6065755
+      - -34,62916989
+    - name: id
+      type: int64
+      samples:
+      - 1914
+      - 1270
+      - 911
+    - name: nombre
+      type: object
+      samples:
+      - TON & SON
+      - BAR CANDY
+      - LAS VIOLETAS
+    - name: categoria
+      type: object
+      samples:
+      - RESTAURANTE
+      - .nan
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - GRIEGA
+      - BOLIVIANA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - MEXICANO
+      - "HIST\xD3RICA"
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4815 3359
+      - 4301 7770
+    - name: mail
+      type: object
+      samples:
+      - s87j5siw@protonmail.com
+      - af9jbtg5jx@protonmail.com
+      - adjwtd6k3@outlook.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a viernes de 8 a 17
+      - .nan
+      - lunes a domingo de 12 a 16 y de 19 al cierre
+    - name: calle_nombre
+      type: object
+      samples:
+      - PUEYRREDON AV
+      - YRIGOYEN HIPOLITO
+      - AVELLANEDA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 304
+      - 3
+      - 1368
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - ALCORTA
+      - JUSTO, JUAN B
+    - name: direccion_completa
+      type: object
+      samples:
+      - BOUCHARD 474
+      - SANTA FE AV. 3954
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Belgrano
+      - Flores
+      - Colegiales
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 8
+      - Comuna 9
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1135.0
+      - 1133.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1107AFP
+      - C1225AAM
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+  lista la tabla ordenada alfabeticamente por nombre
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:34:43 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Order dataframe alphabetically by nombre column
+dfs[0] = dfs[0].sort_values(by='nombre')
+
+# Declare result var
+result = {
+    "type": "dataframe",
+    "value": dfs[0]
+}
+            ```
+            
+2024-08-30 17:34:43 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:34:44 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:34:44 [INFO] 
+Code running:
+```
+dfs[0] = dfs[0].sort_values(by='nombre')
+result = {'type': 'dataframe', 'value': dfs[0]}
+        ```
+2024-08-30 17:34:44 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:34:44 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:34:44 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+5     -58,42226235   -34,5718432     3        4 X 4 CAFE  ...        Palermo  Comuna 14        1425.0                C1425ABY
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2817  -58,37390199  -34,60168838  2545          ZEPELLIN  ...    San Nicolas   Comuna 1        1004.0                C1004AAK
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+
+[2823 rows x 18 columns]}
+2024-08-30 17:34:44 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:35:08 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:35:08 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:35:08 [INFO] Prompt ID: 6ba7795d-7f88-44ce-8a37-d7146914d347
+2024-08-30 17:35:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:35:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:35:08 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:35:08 [INFO] Using cached response
+2024-08-30 17:35:08 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:35:08 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:35:08 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:35:08 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:35:08 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:35:08 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:35:08 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:35:08 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:35:08 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:35:08 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:35:08 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:35:08 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:35:08 [INFO] Question: lista los registros del barrio de palermo
+2024-08-30 17:35:08 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:35:08 [INFO] Prompt ID: 72d8b987-c335-4859-81c9-baca5a01de80
+2024-08-30 17:35:08 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:35:08 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:35:08 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:35:08 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:35:08 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ lista los registros del barrio de palermo
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:35:08 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:35:10 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:35:10 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ lista los registros del barrio de palermo
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:35:10 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare dfs variable
+dfs = [
+  pd.DataFrame({
+    'long': [-58.38711952, -58.43397741, -58.4606048],
+    'lat': [-34.56686441, -34.60517738, -34.61804912],
+    'id': [2724, 631, 1390],
+    'nombre': ['CENTENARIO', 'CAFE BORDO', 'DALI'],
+    'categoria': ['VINERIA', 'RESTAURANTE', None],
+    'cocina': ['JUDIA', 'PATAGONICA', None],
+    'ambientacion': ['CLASICO PORTE�O', 'AMERICANO', None],
+    'telefono': [None, '4313 2981', '4823 3883'],
+    'mail': ['www.senortango.com.ar', 'administracion@embrujoresto.com', None],
+    'horario': ['lunes a domingo de 6.30 a 2', None, 'lunes a s�bado de 8 a 3'],
+    'calle_nombre': ['VALLE IBERLUCEA del Dr.', 'ARCE', 'REPUBLICA ARABE-SIRIA'],
+    'calle_altura': [702, 2886, 1115],
+    'calle_cruce': ['DONADO', 'ALCORTA', None],
+    'direccion_completa': ['CALLAO AV. 1074', None, 'MONROE 1800'],
+    'barrio': ['Parque Chacabuco', 'Mataderos', 'Nu�ez'],
+    'comuna': ['Comuna 6', 'Comuna 1', 'Comuna 7'],
+    'codigo_postal': [1027.0, None, 1067.0],
+    'codigo_postal_argentino': ['C1406GZO', 'C1116ABI', None]
+  })
+]
+
+# Filter dataframe for Palermo
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+
+# Declare result var
+result = { "type": "dataframe", "value": palermo_dfs }
+            ```
+            
+2024-08-30 17:35:10 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:35:10 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:35:10 [INFO] 
+Code running:
+```
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+        ```
+2024-08-30 17:35:10 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:35:10 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+2024-08-30 17:35:10 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-30 17:35:10 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:35:10 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:35:10 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:35:10 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:35:11 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:35:11 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-30 17:35:11 [INFO] Code generated:
+            ```
+            palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+            ```
+            
+2024-08-30 17:35:11 [INFO] Executing Step 2: CodeCleaning
+2024-08-30 17:35:11 [INFO] 
+Code running:
+```
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+        ```
+2024-08-30 17:35:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+2024-08-30 17:35:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-08-30 17:35:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:35:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:35:11 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:35:11 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:35:11 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:35:11 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-30 17:35:11 [INFO] Code generated:
+            ```
+            palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+            ```
+            
+2024-08-30 17:35:11 [INFO] Executing Step 2: CodeCleaning
+2024-08-30 17:35:11 [INFO] 
+Code running:
+```
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+        ```
+2024-08-30 17:35:11 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+2024-08-30 17:35:11 [WARNING] Failed to execute code retrying with a correction framework [retry number: 3]
+2024-08-30 17:35:11 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:35:11 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:35:11 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:35:11 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:35:12 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2024-08-30 17:35:12 [INFO] Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2024-08-30 17:35:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:35:14 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38711952
+      - -58,43397741
+      - -58,4606048
+    - name: lat
+      type: object
+      samples:
+      - -34,56686441
+      - -34,60517738
+      - -34,61804912
+    - name: id
+      type: int64
+      samples:
+      - 2724
+      - 631
+      - 1390
+    - name: nombre
+      type: object
+      samples:
+      - CENTENARIO
+      - CAFE BORDO
+      - DALI
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - RESTAURANTE
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - JUDIA
+      - PATAGONICA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - "CLASICO PORTE\xD1O"
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4313 2981
+      - 4823 3883
+    - name: mail
+      type: object
+      samples:
+      - www.senortango.com.ar
+      - administracion@embrujoresto.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 6.30 a 2
+      - .nan
+      - "lunes a s\xE1bado de 8 a 3"
+    - name: calle_nombre
+      type: object
+      samples:
+      - VALLE IBERLUCEA del Dr.
+      - ARCE
+      - REPUBLICA ARABE-SIRIA
+    - name: calle_altura
+      type: int64
+      samples:
+      - 702
+      - 2886
+      - 1115
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CALLAO AV. 1074
+      - .nan
+      - MONROE 1800
+    - name: barrio
+      type: object
+      samples:
+      - Parque Chacabuco
+      - Mataderos
+      - "Nu\xC3\u0192\xC2\xB1ez"
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 6
+      - Comuna 1
+      - Comuna 7
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1027.0
+      - .nan
+      - 1067.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1406GZO
+      - C1116ABI
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ lista los registros del barrio de palermo
+
+You generated this python code:
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-30 17:35:14 [INFO] Code generated:
+            ```
+            palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+            ```
+            
+2024-08-30 17:35:14 [INFO] Executing Step 2: CodeCleaning
+2024-08-30 17:35:14 [INFO] 
+Code running:
+```
+palermo_dfs = [df for df in dfs if df['barrio'].str.contains('Palermo', na=False).any()]
+result = {'type': 'dataframe', 'value': palermo_dfs}
+        ```
+2024-08-30 17:35:14 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 100, in execute
+    raise InvalidOutputValueMismatch(
+pandasai.exceptions.InvalidOutputValueMismatch: Value must match with type dataframe
+
+2024-08-30 17:35:14 [ERROR] Pipeline failed on step 6: Value must match with type dataframe
+2024-08-30 17:35:44 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:35:44 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:35:44 [INFO] Prompt ID: c7c9d0d4-ffbd-4a46-861c-4bdc799652c0
+2024-08-30 17:35:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:35:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:35:44 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:35:44 [INFO] Using cached response
+2024-08-30 17:35:44 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:35:44 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:35:44 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:35:44 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:35:44 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:35:44 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:35:44 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:35:44 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:35:44 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:35:44 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:35:44 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:35:44 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:35:44 [INFO] Question: lista los registros cuyo barrio sea Palermo
+2024-08-30 17:35:44 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:35:44 [INFO] Prompt ID: 3eeabbfd-44e7-4475-a3c6-f4c3fd779be1
+2024-08-30 17:35:44 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:35:44 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:35:44 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:35:44 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:35:44 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39689056
+      - -58,38772367
+      - -58,43184235
+    - name: lat
+      type: object
+      samples:
+      - -34,5873739
+      - -34,58883246
+      - -34,6151284
+    - name: id
+      type: int64
+      samples:
+      - 6
+      - 1580
+      - 2174
+    - name: nombre
+      type: object
+      samples:
+      - DOMINIO
+      - EL MIRASOL DE PUERTO MADERO
+      - BAR LA ROBLA
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - VINERIA
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - ARABE
+      - .nan
+      - AFRODISIACA
+    - name: ambientacion
+      type: object
+      samples:
+      - FARMACIA
+      - MEXICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4326 5008
+      - 4311 2213
+    - name: mail
+      type: object
+      samples:
+      - ja-cc2@yahoo.com
+      - l4yxcdi9n@yahoo.com
+      - doj284u@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 16 a 21
+      - .nan
+      - lunes a lunes de 7 a 1
+    - name: calle_nombre
+      type: object
+      samples:
+      - BERUTI
+      - SALGUERO JERONIMO
+      - "VILLAFA\xC3\u0192\xE2\u20AC\u02DCE WENCESLAO"
+    - name: calle_altura
+      type: int64
+      samples:
+      - 341
+      - 740
+      - 1373
+    - name: calle_cruce
+      type: object
+      samples:
+      - ALCORTA
+      - .nan
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - GURRUCHAGA 1881
+      - SEGUROLA AV. 196
+    - name: barrio
+      type: object
+      samples:
+      - Versalles
+      - Saavedra
+      - Puerto Madero
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 10
+      - Comuna 11
+      - Comuna 9
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1268.0
+      - .nan
+      - 1143.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1160ABL
+      - C1428BJR
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ lista los registros cuyo barrio sea Palermo
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:35:44 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:35:44 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:35:44 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39689056
+      - -58,38772367
+      - -58,43184235
+    - name: lat
+      type: object
+      samples:
+      - -34,5873739
+      - -34,58883246
+      - -34,6151284
+    - name: id
+      type: int64
+      samples:
+      - 6
+      - 1580
+      - 2174
+    - name: nombre
+      type: object
+      samples:
+      - DOMINIO
+      - EL MIRASOL DE PUERTO MADERO
+      - BAR LA ROBLA
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - VINERIA
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - ARABE
+      - .nan
+      - AFRODISIACA
+    - name: ambientacion
+      type: object
+      samples:
+      - FARMACIA
+      - MEXICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4326 5008
+      - 4311 2213
+    - name: mail
+      type: object
+      samples:
+      - ja-cc2@yahoo.com
+      - l4yxcdi9n@yahoo.com
+      - doj284u@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 16 a 21
+      - .nan
+      - lunes a lunes de 7 a 1
+    - name: calle_nombre
+      type: object
+      samples:
+      - BERUTI
+      - SALGUERO JERONIMO
+      - "VILLAFA\xC3\u0192\xE2\u20AC\u02DCE WENCESLAO"
+    - name: calle_altura
+      type: int64
+      samples:
+      - 341
+      - 740
+      - 1373
+    - name: calle_cruce
+      type: object
+      samples:
+      - ALCORTA
+      - .nan
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - GURRUCHAGA 1881
+      - SEGUROLA AV. 196
+    - name: barrio
+      type: object
+      samples:
+      - Versalles
+      - Saavedra
+      - Puerto Madero
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 10
+      - Comuna 11
+      - Comuna 9
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1268.0
+      - .nan
+      - 1143.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1160ABL
+      - C1428BJR
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ lista los registros cuyo barrio sea Palermo
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:35:44 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = { "type": "dataframe", "value": dfs[0][dfs[0]['barrio'] == 'Palermo'].reset_index(drop=True) }
+            ```
+            
+2024-08-30 17:35:44 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:35:45 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:35:45 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['barrio'] == 'Palermo'].reset_index(drop=True)}
+        ```
+2024-08-30 17:35:45 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:35:45 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:35:45 [INFO] Answer: {'type': 'dataframe', 'value':              long           lat   id        nombre  ...   barrio     comuna codigo_postal codigo_postal_argentino
+0     -58,4254372  -34,58569501    2      4 EN 2 I  ...  Palermo  Comuna 14        1425.0                C1425FFA
+1    -58,42226235   -34,5718432    3    4 X 4 CAFE  ...  Palermo  Comuna 14        1425.0                C1425ABY
+2    -58,43943176  -34,58330514    5       7 SEVEN  ...  Palermo  Comuna 14        1414.0                C1414BKJ
+3      -58,436535  -34,58534613    6  8 MILIMETROS  ...  Palermo  Comuna 14        1414.0                C1414BKC
+4    -58,43766997  -34,58301901    7        ACABAR  ...  Palermo  Comuna 14        1414.0                C1414BNG
+..            ...           ...  ...           ...  ...      ...        ...           ...                     ...
+462  -58,42071868  -34,58890225  481      VIRASORO  ...  Palermo  Comuna 14        1425.0                C1425BUF
+463  -58,42816978  -34,58877159  483        XALAPA  ...  Palermo  Comuna 14        1414.0                C1414BPL
+464  -58,43005331  -34,59147132  484          XANA  ...  Palermo  Comuna 14        1414.0                C1414BGK
+465  -58,43261019  -34,57017243  485        YOKO'S  ...  Palermo  Comuna 14        1426.0                C1426DHG
+466   -58,4335847  -34,58852131  486  ZADVARIE DOC  ...  Palermo  Comuna 14        1414.0                C1414DAM
+
+[467 rows x 18 columns]}
+2024-08-30 17:35:45 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:38:09 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:38:09 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:38:09 [INFO] Prompt ID: 1cfc120a-9383-469d-97ed-a185c4d9c44d
+2024-08-30 17:38:09 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:38:09 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:38:09 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:38:09 [INFO] Using cached response
+2024-08-30 17:38:09 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:38:09 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:38:09 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:38:09 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:38:09 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:38:09 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:38:09 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:38:09 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:38:09 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:38:09 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:38:09 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:38:09 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:38:09 [INFO] Question: Que es maxirest?
+2024-08-30 17:38:09 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:38:09 [INFO] Prompt ID: 2a8122dc-c3dc-416e-b523-0834d99a4c7e
+2024-08-30 17:38:09 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:38:09 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:38:09 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:38:09 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:38:09 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39911759
+      - -58,37302333
+      - -58,38215611
+    - name: lat
+      type: object
+      samples:
+      - -34,60666855
+      - -34,63412859
+      - -34,62101372
+    - name: id
+      type: int64
+      samples:
+      - 344
+      - 44
+      - 2473
+    - name: nombre
+      type: object
+      samples:
+      - BAR SAAVEDRA
+      - ILUMINATI
+      - CAFE LA FORJA
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CONFITERIA
+      - CAFE
+    - name: cocina
+      type: object
+      samples:
+      - ALEMANA
+      - REGIONAL
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - JAPONESA
+      - .nan
+      - TEATRAL
+    - name: telefono
+      type: object
+      samples:
+      - 4813 0970
+      - 4833 3165
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - .nan
+      - astrobar@argentina.com
+      - www.eltocororo.com
+    - name: horario
+      type: object
+      samples:
+      - "martes a s\xE1bado de 20 a 1 "
+      - .nan
+      - "martes a s\xE1bado de 11 al cierre"
+    - name: calle_nombre
+      type: object
+      samples:
+      - CASTEX
+      - VERA
+      - RAMALLO
+    - name: calle_altura
+      type: int64
+      samples:
+      - 4400
+      - 683
+      - 2813
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - .nan
+      - ALCORTA
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - LIMA 603
+      - MEXICO 1501
+    - name: barrio
+      type: object
+      samples:
+      - Versalles
+      - Almagro
+      - Palermo
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 13
+      - Comuna 11
+      - Comuna 6
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1280.0
+      - 1195.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427EGS
+      - .nan
+      - C1425APT
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Que es maxirest?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:38:09 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:38:13 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:38:13 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39911759
+      - -58,37302333
+      - -58,38215611
+    - name: lat
+      type: object
+      samples:
+      - -34,60666855
+      - -34,63412859
+      - -34,62101372
+    - name: id
+      type: int64
+      samples:
+      - 344
+      - 44
+      - 2473
+    - name: nombre
+      type: object
+      samples:
+      - BAR SAAVEDRA
+      - ILUMINATI
+      - CAFE LA FORJA
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CONFITERIA
+      - CAFE
+    - name: cocina
+      type: object
+      samples:
+      - ALEMANA
+      - REGIONAL
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - JAPONESA
+      - .nan
+      - TEATRAL
+    - name: telefono
+      type: object
+      samples:
+      - 4813 0970
+      - 4833 3165
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - .nan
+      - astrobar@argentina.com
+      - www.eltocororo.com
+    - name: horario
+      type: object
+      samples:
+      - "martes a s\xE1bado de 20 a 1 "
+      - .nan
+      - "martes a s\xE1bado de 11 al cierre"
+    - name: calle_nombre
+      type: object
+      samples:
+      - CASTEX
+      - VERA
+      - RAMALLO
+    - name: calle_altura
+      type: int64
+      samples:
+      - 4400
+      - 683
+      - 2813
+    - name: calle_cruce
+      type: object
+      samples:
+      - DONADO
+      - .nan
+      - ALCORTA
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - LIMA 603
+      - MEXICO 1501
+    - name: barrio
+      type: object
+      samples:
+      - Versalles
+      - Almagro
+      - Palermo
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 13
+      - Comuna 11
+      - Comuna 6
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1280.0
+      - 1195.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427EGS
+      - .nan
+      - C1425APT
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Que es maxirest?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:38:13 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = {
+    "type": "dataframe",
+    "value": dfs[0]
+}
+
+# Calculate the number of records in the dataframe
+num_records = len(dfs[0])
+
+# Add the number of records to the result variable
+result.update({
+    "num_records": num_records
+})
+
+# Get the max value of the 'long' column
+max_long = dfs[0]['long'].max()
+
+# Add the max value of the 'long' column to the result variable
+result.update({
+    "max_long": max_long
+})
+
+# Get the max value of the 'lat' column
+max_lat = dfs[0]['lat'].max()
+
+# Add the max value of the 'lat' column to the result variable
+result.update({
+    "max_lat": max_lat
+})
+
+# Get the unique values of the 'categoria' column
+unique_categoria = dfs[0]['categoria'].unique()
+
+# Add the unique values of the 'categoria' column to the result variable
+result.update({
+    "unique_categoria": unique_categoria.tolist()
+})
+
+# Get the unique values of the 'barrio' column
+unique_barrio = dfs[0]['barrio'].unique()
+
+# Add the unique values of the 'barrio' column to the result variable
+result.update({
+    "unique_barrio": unique_barrio.tolist()
+})
+
+# Get the unique values of the 'comuna' column
+unique_comuna = dfs[0]['comuna'].unique()
+
+# Add the unique values of the 'comuna' column to the result variable
+result.update({
+    "unique_comuna": unique_comuna.tolist()
+})
+
+# Get the unique values of the 'codigo_postal_argentino' column
+unique_codigo_postal_argentino = dfs[0]['codigo_postal_argentino'].unique()
+
+# Add the unique values of the 'codigo_postal_argentino' column to the result variable
+result.update({
+    "unique_codigo_postal_argentino": unique_codigo_postal_argentino.tolist()
+})
+            ```
+            
+2024-08-30 17:38:13 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:38:13 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:38:13 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0]}
+num_records = len(dfs[0])
+result.update({'num_records': num_records})
+max_long = dfs[0]['long'].max()
+result.update({'max_long': max_long})
+max_lat = dfs[0]['lat'].max()
+result.update({'max_lat': max_lat})
+unique_categoria = dfs[0]['categoria'].unique()
+result.update({'unique_categoria': unique_categoria.tolist()})
+unique_barrio = dfs[0]['barrio'].unique()
+result.update({'unique_barrio': unique_barrio.tolist()})
+unique_comuna = dfs[0]['comuna'].unique()
+result.update({'unique_comuna': unique_comuna.tolist()})
+unique_codigo_postal_argentino = dfs[0]['codigo_postal_argentino'].unique()
+result.update({'unique_codigo_postal_argentino': unique_codigo_postal_argentino.tolist()})
+        ```
+2024-08-30 17:38:13 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:38:14 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:38:14 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+0     -58,36330675  -34,62296347  1602      GUANTANAMERA  ...  Puerto Madero   Comuna 1        1107.0                C1107AFP
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+2822  -58,43986319  -34,60086815  2854          Angelito  ...   Villa Crespo  Comuna 15        1414.0                C1414AHJ
+
+[2823 rows x 18 columns], 'num_records': 2823, 'max_long': '-58,52956509', 'max_lat': '-34,69225645', 'unique_categoria': ['RESTAURANTE', 'VINERIA', 'CAFE', 'BAR', nan, 'PUB', 'CONFITERIA', 'SANDWICHERIA', 'DELIVERY & TAKE AWAY'], 'unique_barrio': ['Puerto Madero', 'San Cristobal', 'Belgrano', 'Villa Lugano', 'Palermo', 'San Nicolas', 'Villa Crespo', 'Recoleta', 'Retiro', 'San Telmo', 'Flores', 'Monserrat', 'Villa Urquiza', 'Balvanera', 'Versalles', 'Boca', 'Constitucion', 'Almagro', 'Velez Sarsfield', 'Mataderos', 'Caballito', 'Parque Avellaneda', 'Villa Ortuzar', 'Villa Del Parque', 'Chacarita', 'NuÃ±ez', 'Villa Santa Rita', 'Liniers', 'Barracas', 'Villa Pueyrredon', 'Nueva Pompeya', 'Colegiales', 'Saavedra', 'Villa Devoto', 'Parque Patricios', 'Villa Real', 'Floresta', 'Boedo', 'Monte Castro', 'Villa Gral. Mitre', 'Villa Riachuelo', 'Villa Luro', 'Coghlan', 'Parque Chacabuco', 'Paternal', 'Agronomia', 'Villa Soldati'], 'unique_comuna': ['Comuna 1', 'Comuna 3', 'Comuna 13', 'Comuna 8', 'Comuna 14', 'Comuna 15', 'Comuna 2', 'Comuna 7', 'Comuna 12', 'Comuna 10', 'Comuna 4', 'Comuna 5', 'Comuna 9', 'Comuna 6', 'Comuna 11'], 'unique_codigo_postal_argentino': ['C1107AFP', nan, 'C1428DNH', 'C1439FTB', 'C1425FFA', 'C1425ABY', 'C1041AAR', 'C1041AAG', 'C1414AFK', 'C1004AAN', 'C1124AAA', 'C1414BKJ', 'C1414BKC', 'C1009ABK', 'C1439BYS', 'C1047AAK', 'C1061AAD', 'C1064AAP', 'C1406EXX', 'C1414BNG', 'C1047AAO', 'C1093ABH', 'C1431FBH', 'C1083ABC', 'C1425DQE', 'C1188AAA', 'C1406EKT', 'C1426EOO', 'C1122AAG', 'C1408AYM', 'C1157ABI', 'C1011ABF', 'C1107AFJ', 'C1098AAH', 'C1094AAN', 'C1203AAQ', 'C1425BIO', 'C1088AAR', 'C1122AAI', 'C1085ABC', 'C1425ASN', 'C1414CYM', 'C1098AAL', 'C1147AAH', 'C1203AAN', 'C1102AAQ', 'C1121ABF', 'C1185ABA', 'C1013AAR', 'C1185AAE', 'C1055AAF', 'C1049AAH', 'C1425BSD', 'C1414BMU', 'C1053ABG', 'C1407DYV', 'C1414BJQ', 'C1004AAL', 'C1048AAD', 'C1041AAH', 'C1440CQC', 'C1425BPF', 'C1414CMY', 'C1424CEE', 'C1406GLH', 'C1414DOO', 'C1087AAB', 'C1425DGL', 'C1424BSF', 'C1407GZX', 'C1406GMR', 'C1225AAM', 'C1427CXW', 'C1419HYS', 'C1405BCM', 'C1067AAA', 'C1093AAC', 'C1098AAX', 'C1037ACA', 'C1112AAM', 'C1073AAN', 'C1003AAE', 'C1088AAL', 'C1425BGP', 'C1425BIP', 'C1425GKB', 'C1414BBQ', 'C1425BMR', 'C1425BGC', 'C1429BMV', 'C1406GMS', 'C1047AAH', 'C1406GMQ', 'C1427EGS', 'C1055ABF', 'C1426BEA', 'C1414BSO', 'C1414DKB', 'C1009ABC', 'C1210AAA', 'C1047AAP', 'C1026AAB', 'C1053ABP', 'C1061AAE', 'C1426DJH', 'C1416EXZ', 'C1426DKB', 'C1408GIA', 'C1408AAY', 'C1414DKD', 'C1424CER', 'C1005AAJ', 'C1059ABT', 'C1155AHC', 'C1195AAS', 'C1406GLK', 'C1235ABB', 'C1268ACV', 'C1147AAP', 'C1414BPO', 'C1074AAN', 'C1092AAL', 'C1153ABE', 'C1439IBB', 'C1005AAC', 'C1179AAR', 'C1431EXX', 'C1428DRZ', 'C1034ACO', 'C1181ACF', 'C1159ABN', 'C1025AAC', 'C1005AAO', 'C1416DJW', 'C1063ACL', 'C1044AAA', 'C1414BMS', 'C1092AAQ', 'C1425BUK', 'C1001ABQ', 'C1107CBB', 'C1425BGX', 'C1414BFH', 'C1425AST', 'C1123AAN', 'C1414CQD', 'C1048AAH', 'C1043AAZ', 'C1414BPP', 'C1414BQD', 'C1015ABQ', 'C1053ABR', 'C1437DOG', 'C1107AAJ', 'C1001AAP', 'C1428BVC', 'C1426AAR', 'C1207AAE', 'C1049AAM', 'C1429EJH', 'C1424CEL', 'C1055AAE', 'C1425BWV', 'C1424CEJ', 'C1162AEH', 'C1207AAG', 'C1414BNE', 'C1051ABE', 'C1414DKJ', 'C1430ABH', 'C1414DGA', 'C1101AAL', 'C1203AAG', 'C1419IBP', 'C1034ACR', 'C1043AAE', 'C1428ARH', 'C1096ABA', 'C1028AAK', 'C1407HUT', 'C1425ECA', 'C1425DGV', 'C1156ADB', 'C1067AAE', 'C1025ABJ', 'C1154AAC', 'C1425DUB', 'C1030AAJ', 'C1067ABC', 'C1027AAF', 'C1427CHE', 'C1133AAO', 'C1426CQE', 'C1187AAB', 'C1041AAM', 'C1083AAR', 'C1414CTS', 'C1115AAI', 'C1102ABD', 'C1242AAU', 'C1209AAC', 'C1425ABL', 'C1189AAH', 'C1041AAZ', 'C1280ACG', 'C1006ACF', 'C1050AAH', 'C1044AAM', 'C1033AAW', 'C1414DCD', 'C1425CDF', 'C1429CCS', 'C1425BMH', 'C1055ABE', 'C1439BSW', 'C1001AAS', 'C1425DUH', 'C1440BBV', 'C1431EZE', 'C1098AAZ', 'C1009ABM', 'C1154AAX', 'C1036AAN', 'C1405CNS', 'C1414CMS', 'C1427CDR', 'C1195AAA', 'C1440ECM', 'C1419IAG', 'C1427EDE', 'C1425BNN', 'C1425BPS', 'C1049AAF', 'C1042AAP', 'C1407AMA', 'C1117ABO', 'C1186ACI', 'C1430AAY', 'C1040AAK', 'C1003AAP', 'C1047AAQ', 'C1101AAE', 'C1425FFD', 'C1025ABB', 'C1004AAM', 'C1414BSH', 'C1138ACK', 'C1036AAE', 'C1037ABC', 'C1189AAJ', 'C1049AAQ', 'C1008AAO', 'C1414DAP', 'C1221ADF', 'C1425BGH', 'C1406AJE', 'C1107CCF', 'C1428CPG', 'C1048AAL', 'C1045AAN', 'C1425DKM', 'C1092AAJ', 'C1034ACN', 'C1428AEC', 'C1431BJJ', 'C1097AAR', 'C1426AJJ', 'C1061AAC', 'C1425ELN', 'C1425BNG', 'C1118AAF', 'C1414DKN', 'C1429BIZ', 'C1052ABA', 'C1107AAD', 'C1038AAJ', 'C1010AAR', 'C1059ABF', 'C1426DAA', 'C1425APP', 'C1003ABV', 'C1406BOT', 'C1425FUA', 'C1015ABR', 'C1121ABE', 'C1023AAO', 'C1407FAB', 'C1049AAL', 'C1113AAL', 'C1425BUP', 'C1044AAJ', 'C1425ADE', 'C1407HFG', 'C1414CPS', 'C1426DHH', 'C1255ABN', 'C1429ABN', 'C1426BQC', 'C1407GOM', 'C1041AAL', 'C1406GKE', 'C1417AAL', 'C1425BKG', 'C1101ABA', 'C1043AAH', 'C1425FCC', 'C1137ACC', 'C1090ABD', 'C1414DDJ', 'C1426BRL', 'C1424CEC', 'C1406GZI', 'C1036AAM', 'C1049AAT', 'C1002ABL', 'C1424CEA', 'C1042ABD', 'C1125ABC', 'C1042AAQ', 'C1429AKI', 'C1007ABH', 'C1414DGB', 'C1172ACD', 'C1111AAD', 'C1414BEH', 'C1425BLA', 'C1002ABN', 'C1033AAG', 'C1127AAD', 'C1120AAU', 'C1113ABA', 'C1406GLR', 'C1120AAS', 'C1425BGA', 'C1424CEB', 'C1097AAG', 'C1121ABL', 'C1427EFK', 'C1416BTD', 'C1267AEI', 'C1414DGC', 'C1424BYR', 'C1250AAT', 'C1100AAC', 'C1166AAN', 'C1166ACA', 'C1041AAK', 'C1431EZC', 'C1426ABN', 'C1088AAN', 'C1416CRT', 'C1425BAA', 'C1045AAB', 'C1043AAJ', 'C1424CCI', 'C1051ACB', 'C1120AAR', 'C1088AAF', 'C1129ABB', 'C1419IFR', 'C1026ABO', 'C1050AAA', 'C1066AAF', 'C1405CBB', 'C1425BGM', 'C1419IBS', 'C1427DNE', 'C1050AAQ', 'C1049AAE', 'C1008AAE', 'C1047AAL', 'C1425BKE', 'C1425BBJ', 'C1048AAK', 'C1419HZC', 'C1424AAQ', 'C1406GDR', 'C1042AAB', 'C1429DUB', 'C1405DJE', 'C1112AAI', 'C1425ABV', 'C1425DBM', 'C1018ADD', 'C1014ACQ', 'C1076AAL', 'C1054AAD', 'C1416BTW', 'C1009ABO', 'C1059ABD', 'C1129ABN', 'C1162ABI', 'C1016ACB', 'C1064AAF', 'C1041AAJ', 'C1076AAF', 'C1280AEA', 'C1019ABM', 'C1416AAJ', 'C1026ABB', 'C1084AAD', 'C1038AAQ', 'C1009ABW', 'C1426AAM', 'C1425AAV', 'C1086AAN', 'C1406GLA', 'C1414BMK', 'C1414DNW', 'C1414CHU', 'C1428CQJ', 'C1066AAL', 'C1428BJR', 'C1160ABL', 'C1426BRF', 'C1414DRE', 'C1095ABC', 'C1426BSC', 'C1425DEX', 'C1407AVF', 'C1055AAB', 'C1125ABB', 'C1425BDE', 'C1033AAO', 'C1414AJN', 'C1121ABN', 'C1425FOJ', 'C1006ACE', 'C1428ABB', 'C1025ABH', 'C1008AAD', 'C1406FXB', 'C1068AAD', 'C1043ABN', 'C1424BSQ', 'C1431FON', 'C1104AKC', 'C1414BNC', 'C1119AAD', 'C1161AAN', 'C1425DGQ', 'C1414BFC', 'C1120AAC', 'C1041AAT', 'C1031ABG', 'C1408DSJ', 'C1116ABH', 'C1033AAJ', 'C1425BEE', 'C1102AAM', 'C1004AAK', 'C1426CUE', 'C1081AAF', 'C1054AAG', 'C1414AWM', 'C1099AAD', 'C1044AAI', 'C1439COM', 'C1425BVJ', 'C1419HYG', 'C1419HZR', 'C1042ABH', 'C1424BYW', 'C1045AAA', 'C1094ABC', 'C1270AAY', 'C1029AAF', 'C1026ABC', 'C1040AAA', 'C1116ABG', 'C1111AAG', 'C1430EEO', 'C1425DEE', 'C1119ACI', 'C1136ABH', 'C1053ABM', 'C1440BBW', 'C1406AEB', 'C1151ABC', 'C1439FUC', 'C1015ABF', 'C1429BMM', 'C1074AAD', 'C1060AAE', 'C1001ABU', 'C1408AKL', 'C1429DUA', 'C1049AAS', 'C1293ACE', 'C1419IAC', 'C1124AAH', 'C1440ADD', 'C1407EOJ', 'C1042ABC', 'C1225AAS', 'C1406AJT', 'C1414CID', 'C1426EGR', 'C1074AAO', 'C1288AEH', 'C1173ABV', 'C1051ABF', 'C1407ELY', 'C1428AAP', 'C1406FYK', 'C1424BYS', 'C1008AAN', 'C1003ABN', 'C1005AAK', 'C1406GMD', 'C1049AAK', 'C1113AAS', 'C1407BNZ', 'C1425BDD', 'C1235ABE', 'C1428AEJ', 'C1414BGK', 'C1414DAQ', 'C1430DVW', 'C1195AAF', 'C1123AAG', 'C1425DHB', 'C1439DBK', 'C1003ABF', 'C1430BKP', 'C1419HZJ', 'C1414AOM', 'C1119AAC', 'C1092AAC', 'C1406EKM', 'C1426DKA', 'C1425BLD', 'C1107AFI', 'C1207ABE', 'C1414CMT', 'C1128ACH', 'C1425ASI', 'C1022AAN', 'C1073AAM', 'C1008AAH', 'C1028AAD', 'C1406EKX', 'C1425BHH', 'C1102ABB', 'C1414AJU', 'C1430AZI', 'C1089AAD', 'C1414CHW', 'C1406GDC', 'C1428DRA', 'C1439FQN', 'C1425EKX', 'C1054AAS', 'C1043AAR', 'C1425BMW', 'C1414ALN', 'C1002ABK', 'C1407GPS', 'C1039AAN', 'C1250AAD', 'C1424CED', 'C1207AAC', 'C1431EZK', 'C1003ABI', 'C1199ACK', 'C1003ABR', 'C1010ABB', 'C1093ABA', 'C1038AAW', 'C1426AKH', 'C1414CMR', 'C1203AAO', 'C1426BSE', 'C1090AAS', 'C1414COU', 'C1124AAK', 'C1004AAS', 'C1031ABI', 'C1414DKA', 'C1113AAX', 'C1414BKI', 'C1203AAT', 'C1425AAX', 'C1113AAO', 'C1007ABG', 'C1008AAL', 'C1040AAD', 'C1003ABT', 'C1111AAJ', 'C1425BRY', 'C1175ABW', 'C1428BCX', 'C1414DIL', 'C1004AAG', 'C1058AAT', 'C1143AAE', 'C1407GPT', 'C1118AAS', 'C1425DFB', 'C1425BGK', 'C1425AYN', 'C1118AAO', 'C1001ABP', 'C1425BGN', 'C1008AAI', 'C1007AAB', 'C1439DBO', 'C1127AAC', 'C1407CBB', 'C1218AAD', 'C1205AAO', 'C1060AAB', 'C1429DUT', 'C1199ACL', 'C1425BBR', 'C1265AEA', 'C1181ADB', 'C1414BMV', 'C1093AAP', 'C1425BRO', 'C1059ABC', 'C1249ABM', 'C1419ICG', 'C1136ABI', 'C1416DJX', 'C1414BBB', 'C1095AAD', 'C1414BNH', 'C1175ABS', 'C1425DPH', 'C1037ACC', 'C1414BNF', 'C1002ABP', 'C1425EZI', 'C1430BRN', 'C1426AGV', 'C1406EKW', 'C1147AAR', 'C1414DNV', 'C1097AAL', 'C1067AAD', 'C1174ABH', 'C1431FAA', 'C1416DRD', 'C1414CUB', 'C1419EQJ', 'C1425BYH', 'C1426CRG', 'C1427CHA', 'C1041AAN', 'C1097AAX', 'C1440ABC', 'C1425BTP', 'C1414AIA', 'C1414CEQ', 'C1050AAJ', 'C1091AAY', 'C1226AAB', 'C1426BWX', 'C1003ABO', 'C1414BND', 'C1064AAO', 'C1414CTV', 'C1425BHQ', 'C1416DRZ', 'C1048AAM', 'C1425BTJ', 'C1264AAO', 'C1425BYG', 'C1426BRD', 'C1001AAO', 'C1092AAT', 'C1437IYN', 'C1038ABA', 'C1095AAY', 'C1095AAC', 'C1428ARR', 'C1036AAO', 'C1098AAI', 'C1427AAT', 'C1006ACI', 'C1430EBR', 'C1120AAG', 'C1426DHE', 'C1416ANA', 'C1039AAP', 'C1260ABA', 'C1044AAE', 'C1419HZI', 'C1406FYU', 'C1220ADF', 'C1064AAH', 'C1161AEH', 'C1430ABG', 'C1424BSG', 'C1406GMU', 'C1425BNE', 'C1439BSG', 'C1270ABN', 'C1425ASG', 'C1425BEN', 'C1424CET', 'C1259AAO', 'C1408BXD', 'C1426EJS', 'C1066AAW', 'C1440AAM', 'C1425BKL', 'C1429EJE', 'C1093ABD', 'C1010AAF', 'C1416CZP', 'C1407DYF', 'C1004AAO', 'C1046AAB', 'C1406GLX', 'C1043AAU', 'C1407BOB', 'C1428CQM', 'C1292AAB', 'C1169AAD', 'C1053ACA', 'C1424BSA', 'C1440BBB', 'C1013AAS', 'C1405DCX', 'C1060AAD', 'C1076AAA', 'C1419ICS', 'C1430EEB', 'C1440ECL', 'C1039AAJ', 'C1207ABP', 'C1102AAH', 'C1425FOK', 'C1073AAE', 'C1439CLU', 'C1081ABD', 'C1165AGD', 'C1053ACB', 'C1184ABK', 'C1102AAK', 'C1414DFE', 'C1001AAB', 'C1425BAF', 'C1429ABS', 'C1039AAO', 'C1425BHP', 'C1406HAC', 'C1414CSA', 'C1042AAC', 'C1137ACG', 'C1264AAK', 'C1086AAS', 'C1172ACH', 'C1406EXP', 'C1022AAR', 'C1244ABS', 'C1408FGT', 'C1419IAB', 'C1419EQR', 'C1407DYG', 'C1154AAE', 'C1264AAI', 'C1086AAU', 'C1417BWZ', 'C1427BPG', 'C1002AAF', 'C1113AAN', 'C1424BYQ', 'C1251ABD', 'C1429AAW', 'C1407EJG', 'C1414BTI', 'C1093AAR', 'C1199ABG', 'C1416CSI', 'C1419EQD', 'C1414BKL', 'C1101AAH', 'C1053ABD', 'C1092AAO', 'C1428BLS', 'C1114AAR', 'C1426CTG', 'C1034ACT', 'C1264AAT', 'C1225AAP', 'C1147AAQ', 'C1157ADB', 'C1041AAO', 'C1406EKZ', 'C1406BOV', 'C1437JEH', 'C1047AAT', 'C1270AAK', 'C1008AAF', 'C1104AJQ', 'C1010AAV', 'C1003ABE', 'C1140ABD', 'C1276ACK', 'C1425BSM', 'C1065AAT', 'C1431CAP', 'C1416DSV', 'C1425BSN', 'C1098AAG', 'C1407GOU', 'C1424BXH', 'C1027AAE', 'C1427EDP', 'C1038AAM', 'C1439CMC', 'C1426BRI', 'C1270ABR', 'C1294ABC', 'C1159ABC', 'C1414DGD', 'C1275AGH', 'C1067AAH', 'C1154AAY', 'C1053ABT', 'C1425FQI', 'C1026ABG', 'C1070AAV', 'C1065AAM', 'C1265ACB', 'C1439BTK', 'C1414CMV', 'C1055ABA', 'C1001AAN', 'C1425BTC', 'C1074AAI', 'C1424BSP', 'C1419EQT', 'C1406HMV', 'C1407HUR', 'C1003ABL', 'C1425DUJ', 'C1085ABQ', 'C1419HZG', 'C1178ABA', 'C1414BHM', 'C1055ABB', 'C1424CIE', 'C1061ABD', 'C1424BJL', 'C1405BVC', 'C1055AAC', 'C1414CKL', 'C1407IKM', 'C1414BAY', 'C1061ABB', 'C1073AAG', 'C1123AAQ', 'C1033AAC', 'C1406FVM', 'C1417COP', 'C1043AAL', 'C1099AAC', 'C1083AAO', 'C1430BLB', 'C1079ABQ', 'C1431CAW', 'C1414BKF', 'C1055AAQ', 'C1054ABC', 'C1427EDN', 'C1046AAP', 'C1225ABA', 'C1026ABN', 'C1426BTI', 'C1431EZL', 'C1035ABA', 'C1425BYL', 'C1414BWJ', 'C1414DMK', 'C1017AAK', 'C1406GRI', 'C1218AAF', 'C1233ABG', 'C1429DEG', 'C1092AAS', 'C1107AFL', 'C1426AGS', 'C1425BBY', 'C1054AAU', 'C1049AAN', 'C1102AAN', 'C1035ABG', 'C1440AAN', 'C1054AAI', 'C1086AAB', 'C1425EVG', 'C1017AAN', 'C1030AAN', 'C1426CQS', 'C1002ABD', 'C1428AAI', 'C1406GWF', 'C1111AAH', 'C1056ABH', 'C1262AAC', 'C1040AAP', 'C1025AAH', 'C1440BBO', 'C1425BMQ', 'C1056ABB', 'C1180ACH', 'C1009ABU', 'C1425FQL', 'C1406GLI', 'C1407DYU', 'C1416DJV', 'C1426CPQ', 'C1060ABP', 'C1414CXH', 'C1015ABD', 'C1425BRL', 'C1425FNI', 'C1002ABH', 'C1005AAD', 'C1117ABB', 'C1406GME', 'C1048AAI', 'C1250AAF', 'C1115AAL', 'C1427CEQ', 'C1431FAN', 'C1406EXN', 'C1004AAJ', 'C1437FBD', 'C1425BEM', 'C1083AAC', 'C1414CEA', 'C1429ABD', 'C1119ACC', 'C1424CIT', 'C1426CQO', 'C1428DNO', 'C1414DIJ', 'C1002ABA', 'C1417ALA', 'C1428CQK', 'C1427CCF', 'C1006ACJ', 'C1189AAP', 'C1094ABN', 'C1029AAI', 'C1040AAO', 'C1225AAR', 'C1120AAH', 'C1428BKU', 'C1425DBZ', 'C1041AAY', 'C1419EQV', 'C1414AJS', 'C1425EYK', 'C1038AAH', 'C1426CQU', 'C1089AAL', 'C1180ACD', 'C1002ABO', 'C1068AAG', 'C1098ABD', 'C1067ABN', 'C1003ABM', 'C1425DBF', 'C1425BRE', 'C1425FBG', 'C1408CPK', 'C1141ACD', 'C1003AAN', 'C1063ACC', 'C1113AAI', 'C1112ABO', 'C1113AAG', 'C1086AAF', 'C1414BQJ', 'C1425BSR', 'C1414BTJ', 'C1187AAG', 'C1038AAR', 'C1414DIK', 'C1055AAS', 'C1427CEY', 'C1414COW', 'C1424CIF', 'C1174ABX', 'C1057AAH', 'C1425DGT', 'C1008AAP', 'C1414DRZ', 'C1055ABC', 'C1107AAF', 'C1107CKF', 'C1043AAW', 'C1425ATN', 'C1425BGT', 'C1119ACO', 'C1118AAQ', 'C1204AAQ', 'C1425BMU', 'C1425BUN', 'C1426BSO', 'C1107AAX', 'C1425BHO', 'C1414BNL', 'C1086AAJ', 'C1221ADB', 'C1035ABH', 'C1116ABF', 'C1414CLN', 'C1414CLA', 'C1405BAQ', 'C1128ACF', 'C1057AAE', 'C1001ABW', 'C1044AAC', 'C1022AAB', 'C1038AAI', 'C1275AGQ', 'C1407FIR', 'C1085ABO', 'C1055AAD', 'C1416DJU', 'C1169AAA', 'C1425EGK', 'C1425DQC', 'C1059ABH', 'C1043AAM', 'C1011ABB', 'C1425BBQ', 'C1023AAE', 'C1426CTF', 'C1107CDA', 'C1061AAH', 'C1408AAW', 'C1426DYE', 'C1430ABE', 'C1070AAP', 'C1086AAG', 'C1427CCE', 'C1047AAR', 'C1002AAS', 'C1057AAD', 'C1205AAP', 'C1425EVE', 'C1072AAH', 'C1424CCH', 'C1013AAH', 'C1187AAP', 'C1414AJT', 'C1011ABG', 'C1425BEJ', 'C1019ABJ', 'C1011AAE', 'C1047AAI', 'C1429BST', 'C1426EOW', 'C1027AAI', 'C1437DCG', 'C1405CND', 'C1430BKB', 'C1188AAB', 'C1429AJC', 'C1425AWF', 'C1425BHV', 'C1431FBU', 'C1428DNA', 'C1058AAA', 'C1225AAN', 'C1430AIK', 'C1094ABE', 'C1022AAQ', 'C1044AAF', 'C1419IGJ', 'C1425BNK', 'C1022AAA', 'C1407HGU', 'C1084AAQ', 'C1431APD', 'C1006ACD', 'C1414DDG', 'C1424BSC', 'C1268ACP', 'C1003ABG', 'C1089AAJ', 'C1044AAG', 'C1406AJP', 'C1125ABE', 'C1425BLH', 'C1054AAQ', 'C1058AAQ', 'C1129ABO', 'C1074AAC', 'C1437DOE', 'C1419ERP', 'C1408CPJ', 'C1406GJM', 'C1160ABM', 'C1414DON', 'C1405CRU', 'C1101AAI', 'C1162AEC', 'C1407EMB', 'C1107AAL', 'C1407HAP', 'C1414BGQ', 'C1425AYA', 'C1414CTP', 'C1406GRO', 'C1161AAM', 'C1037ABF', 'C1022AAO', 'C1186AAR', 'C1183AER', 'C1154AAJ', 'C1230AAP', 'C1065AAR', 'C1425BEC', 'C1426AGG', 'C1414CKM', 'C1043AAT', 'C1049AAR', 'C1162ABN', 'C1102AAF', 'C1209AAO', 'C1113AAC', 'C1440EVB', 'C1087AAE', 'C1153ABW', 'C1162ABM', 'C1098AAR', 'C1425EUH', 'C1425BWC', 'C1405DJN', 'C1022AAD', 'C1408ABN', 'C1437DOP', 'C1079ABE', 'C1424CEW', 'C1022AAP', 'C1416CSP', 'C1426DJE', 'C1066AAT', 'C1186AAG', 'C1427EDF', 'C1137ABB', 'C1416AJR', 'C1437EIM', 'C1427ASA', 'C1414BGV', 'C1260AAG', 'C1407DYX', 'C1425ECC', 'C1268ACH', 'C1006ACH', 'C1414CTU', 'C1425AUK', 'C1407AOC', 'C1417FOL', 'C1053ABH', 'C1425BVP', 'C1425BNS', 'C1406GWD', 'C1425BCA', 'C1047AAS', 'C1141AAA', 'C1047AAN', 'C1406GSI', 'C1160ABN', 'C1424BSX', 'C1051ABA', 'C1264AAV', 'C1431BZR', 'C1406GZZ', 'C1066AAR', 'C1209ABD', 'C1425DGI', 'C1428AAV', 'C1155AER', 'C1408ABQ', 'C1123AAA', 'C1431CAN', 'C1264AAJ', 'C1419ICK', 'C1176ADC', 'C1003AAR', 'C1288AFC', 'C1426BRG', 'C1424BYJ', 'C1425ADF', 'C1122AAK', 'C1008AAB', 'C1440ECZ', 'C1195AAN', 'C1439BSA', 'C1042AAA', 'C1425FWC', 'C1079AAA', 'C1033AAX', 'C1429BSI', 'C1419AAD', 'C1019ABL', 'C1148ABH', 'C1426BUJ', 'C1049AAP', 'C1408CPH', 'C1425DUU', 'C1095AAI', 'C1407GZE', 'C1406EXB', 'C1407DYB', 'C1425ASE', 'C1055ABG', 'C1426BRH', 'C1427CDA', 'C1406HKS', 'C1123AAP', 'C1419HZF', 'C1161ACD', 'C1038AAZ', 'C1117ABL', 'C1424BYE', 'C1288AFA', 'C1425BHT', 'C1428ARW', 'C1428BSJ', 'C1407KBR', 'C1288AEC', 'C1429AAU', 'C1225AAC', 'C1111AAF', 'C1425DTP', 'C1406GMN', 'C1431AAU', 'C1406GWQ', 'C1407BOC', 'C1042AAD', 'C1414BSN', 'C1437GYP', 'C1407GPL', 'C1425BOH', 'C1155ACB', 'C1107AAV', 'C1414DLJ', 'C1425BTD', 'C1425BTL', 'C1089AAO', 'C1029AAM', 'C1419GDB', 'C1034ACF', 'C1440AAT', 'C1429BTJ', 'C1425BKO', 'C1425FIJ', 'C1414BFK', 'C1427BZS', 'C1261ACN', 'C1169AAC', 'C1083AAN', 'C1425GKD', 'C1425ASM', 'C1151ABH', 'C1100AAB', 'C1431APX', 'C1414DFF', 'C1429ADW', 'C1425FFH', 'C1091AAQ', 'C1057AAU', 'C1407DYW', 'C1406GZD', 'C1269ACA', 'C1259ABE', 'C1428AAU', 'C1195AAQ', 'C1416DRG', 'C1087AAF', 'C1425FQM', 'C1112ADD', 'C1425DSN', 'C1419EQU', 'C1407GPI', 'C1053ABQ', 'C1427CDN', 'C1414ADH', 'C1437DOB', 'C1425APM', 'C1040AAH', 'C1414DLP', 'C1426BSD', 'C1424BYN', 'C1043AAV', 'C1203AAP', 'C1026ABD', 'C1215ACS', 'C1195AAB', 'C1039AAG', 'C1091ABB', 'C1066AAS', 'C1003ABX', 'C1428BKV', 'C1049AAI', 'C1120AAA', 'C1047AAM', 'C1264AAN', 'C1011ABA', 'C1419HZE', 'C1437JCE', 'C1204AAD', 'C1022AAT', 'C1426CQF', 'C1260ABO', 'C1239AAF', 'C1013AAQ', 'C1427CEG', 'C1406FQZ', 'C1038AAT', 'C1137ACN', 'C1079ABR', 'C1439FUE', 'C1426BTM', 'C1414CMQ', 'C1166ACB', 'C1097ABD', 'C1425BVL', 'C1074AAJ', 'C1028AAF', 'C1430BKN', 'C1431BZE', 'C1405BRF', 'C1414BNK', 'C1426DZD', 'C1406GTA', 'C1427CCI', 'C1414CKE', 'C1425AWI', 'C1129AAA', 'C1126AAA', 'C1002ABM', 'C1027AAH', 'C1426AAJ', 'C1424DET', 'C1134ADG', 'C1062ACA', 'C1031ABM', 'C1059ABS', 'C1078AAP', 'C1406HAQ', 'C1062ABE', 'C1064AAM', 'C1425API', 'C1408DSA', 'C1425ABH', 'C1408FGU', 'C1428CTU', 'C1430CCE', 'C1406HMS', 'C1091AAD', 'C1035ABF', 'C1431CGG', 'C1416DRE', 'C1428ADK', 'C1414DZD', 'C1414DID', 'C1091AAC', 'C1261AAR', 'C1268ACJ', 'C1425EGN', 'C1226AAE', 'C1428DNR', 'C1406GST', 'C1107CBJ', 'C1414BSI', 'C1097ABE', 'C1414CHV', 'C1429BTE', 'C1406HNI', 'C1431FBB', 'C1439AGF', 'C1440ECF', 'C1437FEE', 'C1270AAV', 'C1424BSD', 'C1416EYD', 'C1405DJG', 'C1406EXO', 'C1079ABO', 'C1426CPG', 'C1006ACA', 'C1154AAL', 'C1036AAY', 'C1048AAO', 'C1043ABA', 'C1430BLD', 'C1123AAR', 'C1414CEF', 'C1204AAE', 'C1244ABM', 'C1115AAN', 'C1405DJU', 'C1429ABE', 'C1419IBE', 'C1260AAS', 'C1440ATG', 'C1426DHF', 'C1426DQW', 'C1426AJV', 'C1425BKW', 'C1189AAG', 'C1425BBZ', 'C1437GRH', 'C1425DTT', 'C1106ABF', 'C1094AAD', 'C1091AAH', 'C1043AAP', 'C1010AAJ', 'C1425BCB', 'C1107AAU', 'C1428DHR', 'C1437JMQ', 'C1406GSE', 'C1425ATO', 'C1428BLU', 'C1424AAD', 'C1425BHR', 'C1414BMO', 'C1175ABR', 'C1092AAG', 'C1425BNM', 'C1425DUP', 'C1052ABD', 'C1414BSJ', 'C1405BND', 'C1426BRE', 'C1250AAW', 'C1414CTO', 'C1023AAN', 'C1414DKE', 'C1429DAC', 'C1425ECB', 'C1405DJX', 'C1004AAD', 'C1152ABP', 'C1407DYD', 'C1040AAL', 'C1024AAG', 'C1154AAF', 'C1425APT', 'C1012AAU', 'C1425BBS', 'C1098AAQ', 'C1428ADQ', 'C1431EZJ', 'C1425DHR', 'C1407HFN', 'C1414DOP', 'C1057AAM', 'C1426BTP', 'C1425BKF', 'C1425EFI', 'C1425BGY', 'C1414BPK', 'C1425BKV', 'C1270ABQ', 'C1406DXB', 'C1054AAH', 'C1209ABE', 'C1034ACQ', 'C1159ADC', 'C1267ABD', 'C1032ABI', 'C1093ABC', 'C1425BHN', 'C1089AAB', 'C1039AAH', 'C1005AAS', 'C1424CEY', 'C1406GLN', 'C1034ACA', 'C1107AAR', 'C1133AAJ', 'C1250AAU', 'C1431FBW', 'C1429BMR', 'C1084AAO', 'C1431EZY', 'C1440ABZ', 'C1440ABY', 'C1408DSI', 'C1417ABD', 'C1268ABP', 'C1064ADB', 'C1123AAT', 'C1060ABN', 'C1060ABD', 'C1123AAO', 'C1188AAE', 'C1406GLW', 'C1027AAA', 'C1046AAQ', 'C1193AAE', 'C1203AAD', 'C1032ABP', 'C1425BHI', 'C1425DBO', 'C1426AAU', 'C1425DFP', 'C1428AAR', 'C1428AAH', 'C1428ARQ', 'C1426BOT', 'C1425AYW', 'C1186ACF', 'C1419ICA', 'C1069AAV', 'C1195AAP', 'C1414BSF', 'C1016ACH', 'C1037ACE', 'C1030AAF', 'C1047AAD', 'C1051ABB', 'C1235ABP', 'C1428BKP', 'C1425AYF', 'C1204AAO', 'C1431CGN', 'C1426BTN', 'C1429COW', 'C1440ACZ', 'C1018ADB', 'C1426AGU', 'C1425DED', 'C1135AAI', 'C1406GRP', 'C1119ACB', 'C1425DQQ', 'C1419HDR', 'C1426BRC', 'C1295ADE', 'C1416CRQ', 'C1407ANL', 'C1437EYG', 'C1416DRB', 'C1425CKO', 'C1107CHH', 'C1062ABM', 'C1064AAN', 'C1428AAA', 'C1064AFC', 'C1425BTE', 'C1270ABC', 'C1270AAB', 'C1205AAB', 'C1095AAP', 'C1407GZM', 'C1426AGY', 'C1426AEE', 'C1038AAG', 'C1270ABO', 'C1414DMC', 'C1270AAP', 'C1414DEZ', 'C1034ACE', 'C1101AAT', 'C1010AAB', 'C1425CKM', 'C1425AWJ', 'C1425DFN', 'C1426CRF', 'C1407FIX', 'C1416DSS', 'C1050AAG', 'C1036AAW', 'C1419IBD', 'C1029AAE', 'C1017AAL', 'C1051ABC', 'C1425APN', 'C1045AAP', 'C1195AAC', 'C1428BXP', 'C1416DST', 'C1414BFD', 'C1419FSS', 'C1063ADA', 'C1428AKF', 'C1414AHZ', 'C1405DJT', 'C1425AYG', 'C1428DHK', 'C1067ABA', 'C1425DUX', 'C1425BEB', 'C1045ABE', 'C1424AAI', 'C1425BWG', 'C1055AAT', 'C1006ACG', 'C1023AAP', 'C1425DEJ', 'C1125AAF', 'C1022AAG', 'C1416DRC', 'C1425BLB', 'C1407ELZ', 'C1428ADB', 'C1425DUD', 'C1416DSP', 'C1426BTU', 'C1024AAQ', 'C1282AFR', 'C1177AFB', 'C1414DJK', 'C1115AAB', 'C1070AAR', 'C1408CPE', 'C1425ELA', 'C1126AAE', 'C1425FQV', 'C1408BSI', 'C1098AAT', 'C1042ABG', 'C1429EFP', 'C1107CPE', 'C1425DBC', 'C1428DMS', 'C1426CUC', 'C1068AAL', 'C1425DQA', 'C1429BSS', 'C1088AAQ', 'C1426ABP', 'C1078AAE', 'C1127AAN', 'C1414CTM', 'C1425BBD', 'C1425BVG', 'C1414DAL', 'C1406GYJ', 'C1032ABJ', 'C1263AAS', 'C1013AAF', 'C1119ACN', 'C1414DMF', 'C1425FIG', 'C1408AAG', 'C1425FQN', 'C1119ACA', 'C1263AAB', 'C1408AKW', 'C1416DLB', 'C1270AAA', 'C1406GSF', 'C1425ELF', 'C1117ABF', 'C1112ABN', 'C1425DKX', 'C1112ABP', 'C1238ACM', 'C1425DBW', 'C1103ABA', 'C1133AAH', 'C1425BEH', 'C1116ABI', 'C1405DJA', 'C1414DPY', 'C1017AAM', 'C1427BXI', 'C1009ABS', 'C1114AAE', 'C1025ABA', 'C1270AAQ', 'C1419IBR', 'C1425BLE', 'C1424AAU', 'C1429AAX', 'C1430DGV', 'C1439BSC', 'C1200AAJ', 'C1405BAU', 'C1424AMD', 'C1055AAH', 'C1425GAR', 'C1100ABE', 'C1406FQX', 'C1424AHB', 'C1091AAX', 'C1263AAH', 'C1259AAN', 'C1016AAE', 'C1424CEI', 'C1405DCF', 'C1050AAC', 'C1166AEA', 'C1429ADS', 'C1425DBY', 'C1405DCJ', 'C1424BSN', 'C1054AAV', 'C1419FSF', 'C1406AIA', 'C1414DNP', 'C1184AAN', 'C1425AAT', 'C1426ABQ', 'C1118AAR', 'C1009ABG', 'C1425EVB', 'C1023AAG', 'C1120AAN', 'C1028AAO', 'C1012AAT', 'C1425EFC', 'C1424BLF', 'C1055AAU', 'C1023AAQ', 'C1426AAL', 'C1428AFD', 'C1425ASF', 'C1414CMZ', 'C1158ACR', 'C1125AAC', 'C1406GOC', 'C1230ABK', 'C1204AAA', 'C1425BQB', 'C1057AAV', 'C1012AAV', 'C1024AAB', 'C1426AAY', 'C1017AAH', 'C1187AAE', 'C1425BGO', 'C1428DQQ', 'C1140AAD', 'C1090AAT', 'C1275AAK', 'C1038ABB', 'C1424DES', 'C1406EKV', 'C1431FCU', 'C1408ABP', 'C1042ABE', 'C1072AAT', 'C1424CEF', 'C1425ASJ', 'C1011ABE', 'C1431CGI', 'C1424BSU', 'C1417FNV', 'C1428AAG', 'C1260AAI', 'C1407GOH', 'C1406HNA', 'C1425BPG', 'C1030AAB', 'C1161AAL', 'C1187AAH', 'C1414AJV', 'C1406DGL', 'C1030AAM', 'C1429BID', 'C1431DOJ', 'C1431BVP', 'C1406CQI', 'C1137ACF', 'C1424CEP', 'C1424CEN', 'C1425BGW', 'C1425BGU', 'C1065AAS', 'C1001ABO', 'C1095ABA', 'C1049AAC', 'C1424CEG', 'C1405AHC', 'C1112ABC', 'C1414DKL', 'C1042AAN', 'C1428AAB', 'C1425ASD', 'C1406GZO', 'C1036AAU', 'C1128AAC', 'C1176ABZ', 'C1058AAC', 'C1425DEK', 'C1255AAF', 'C1011ABJ', 'C1133AAP', 'C1113AAT', 'C1245ABB', 'C1427DNT', 'C1429CQE', 'C1425BMA', 'C1095AAZ', 'C1116ABE', 'C1425AWK', 'C1005AAE', 'C1026ABE', 'C1117ABC', 'C1207ABD', 'C1414BJR', 'C1424CCR', 'C1407ANH', 'C1033AAB', 'C1102AAA', 'C1169AAF', 'C1428CTG', 'C1166AAO', 'C1143AAD', 'C1440CLV', 'C1408IGX', 'C1019ABO', 'C1406GMF', 'C1429AVS', 'C1429BNT', 'C1406ILD', 'C1023AAS', 'C1118AAG', 'C1425BSQ', 'C1437GNE', 'C1414CQF', 'C1022AAC', 'C1414AGR', 'C1440CLS', 'C1085ABB', 'C1425DQH', 'C1428AAQ', 'C1221ADD', 'C1016ABA', 'C1112ABD', 'C1050AAK', 'C1021AAA', 'C1440ABT', 'C1426EJC', 'C1186ABA', 'C1184ABH', 'C1024AAF', 'C1425FRB', 'C1026ABM', 'C1099AAL', 'C1406ETJ', 'C1407HUU', 'C1126AAD', 'C1185AAP', 'C1114AAS', 'C1007ABD', 'C1019ABT', 'C1184AAC', 'C1057AAI', 'C1162AEN', 'C1425DHK', 'C1051ACA', 'C1192ACE', 'C1408GIB', 'C1414COX', 'C1074AAL', 'C1197AAS', 'C1116ABD', 'C1044AAH', 'C1425BGG', 'C1424AAO', 'C1036AAX', 'C1427EDA', 'C1425AAM', 'C1425FVB', 'C1425AYJ', 'C1124AAE', 'C1427CCN', 'C1425CKJ', 'C1114AAK', 'C1431CIO', 'C1429AAZ', 'C1014ADA', 'C1425ASL', 'C1428DQN', 'C1425BVE', 'C1425DTO', 'C1091AAO', 'C1088AAE', 'C1084ABC', 'C1414BWK', 'C1414BPL', 'C1190ABB', 'C1424CII', 'C1440DYK', 'C1414AQR', 'C1406ACB', 'C1428DNE', 'C1419IAT', 'C1264AAE', 'C1405DJV', 'C1044AAD', 'C1080ABF', 'C1407HUA', 'C1406GZU', 'C1151AAJ', 'C1263AAV', 'C1406GLY', 'C1250AAG', 'C1121ABK', 'C1270AAX', 'C1256ABN', 'C1017AAR', 'C1407GPE', 'C1073AAC', 'C1407AUA', 'C1143AAA', 'C1068AAK', 'C1002ABF', 'C1004AAP', 'C1414BSM', 'C1414DCW', 'C1425FBI', 'C1037ACH', 'C1125AAE', 'C1054AAT', 'C1025ABF', 'C1425DTH', 'C1414BGM', 'C1440ABI', 'C1425EEA', 'C1425FRD', 'C1028AAP', 'C1406CXT', 'C1414BMT', 'C1425BBB', 'C1078AAF', 'C1041AAP', 'C1037ACF', 'C1426AAT', 'C1425FOQ', 'C1107AAP', 'C1226AAA', 'C1080ABN', 'C1040AAJ', 'C1406GMO', 'C1429CLJ', 'C1414DWC', 'C1053ABN', 'C1036AAQ', 'C1414BKD', 'C1428CRJ', 'C1419GDO', 'C1100ACB', 'C1009ABI', 'C1046AAA', 'C1439CJZ', 'C1235ABA', 'C1426BUL', 'C1424BSV', 'C1419BDH', 'C1414BKE', 'C1425FRF', 'C1425BBH', 'C1406GZQ', 'C1425EEC', 'C1187AAN', 'C1406ARA', 'C1424AAH', 'C1123AAF', 'C1057AAG', 'C1426ABO', 'C1440AAL', 'C1116ABJ', 'C1102AAJ', 'C1425BSF', 'C1408AKX', 'C1101AAJ', 'C1425DQR', 'C1007ABB', 'C1426CXC', 'C1119ACR', 'C1414CEB', 'C1406GLS', 'C1414AZK', 'C1424BSR', 'C1428ARG', 'C1406AMF', 'C1037ACG', 'C1414BQC', 'C1037ACD', 'C1015ABB', 'C1041ABA', 'C1406ABB', 'C1425BRR', 'C1187AAA', 'C1417FNJ', 'C1408AAI', 'C1015ABO', 'C1226AAI', 'C1181ACE', 'C1129ACC', 'C1414BNB', 'C1016ACC', 'C1122AAM', 'C1205AAE', 'C1427CCT', 'C1408AAV', 'C1058AAS', 'C1406GZA', 'C1407HGQ', 'C1426CQH', 'C1033AAE', 'C1235ABS', 'C1019ABI', 'C1048AAF', 'C1414DEX', 'C1429AZR', 'C1425DEL', 'C1430BLN', 'C1425FFB', 'C1414BJP', 'C1041AAS', 'C1097ABA', 'C1270AAS', 'C1102AAP', 'C1054AAP', 'C1407ANB', 'C1426DJA', 'C1425BVO', 'C1072AAB', 'C1161AEF', 'C1425DBP', 'C1425DEC', 'C1419DFW', 'C1054AAC', 'C1425BHU', 'C1002ABI', 'C1407HTY', 'C1125ABF', 'C1104AJO', 'C1419HZK', 'C1425ASO', 'C1408CPL', 'C1040AAE', 'C1431FBA', 'C1405CLB', 'C1440ECY', 'C1414BQG', 'C1143AAM', 'C1414DDM', 'C1065AAE', 'C1195AAR', 'C1417DTQ', 'C1425BUF', 'C1414DLL', 'C1424AYG', 'C1406GZB', 'C1406GWP', 'C1414DCA', 'C1428CRC', 'C1429BJG', 'C1001ABR', 'C1001AAQ', 'C1429AAP', 'C1192ACI', 'C1407DYQ', 'C1405CNX', 'C1426DHG', 'C1414DAM', 'C1118AAP', 'C1406ELB', 'C1406GLL', 'C1045AAO', 'C1029AAP', 'C1429BIV', 'C1050AAP', 'C1414AHJ']}
+2024-08-30 17:38:14 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:38:28 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:38:28 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:38:28 [INFO] Prompt ID: 963a2e32-7b53-42a1-8149-dfa98b2011ba
+2024-08-30 17:38:28 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:38:28 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:38:28 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:38:28 [INFO] Using cached response
+2024-08-30 17:38:28 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:38:28 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:38:28 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:38:28 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:38:28 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:38:28 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:38:28 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:38:28 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:38:28 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:38:28 [INFO] Question: Que es maxirest?
+2024-08-30 17:38:28 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:38:28 [INFO] Prompt ID: 45f05a62-9750-4c87-908a-c28d880e5b71
+2024-08-30 17:38:28 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:38:28 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:38:28 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:38:28 [INFO] Using cached response
+2024-08-30 17:38:28 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:38:28 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:38:28 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:38:28 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:38:28 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:38:28 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0]}
+num_records = len(dfs[0])
+result.update({'num_records': num_records})
+max_long = dfs[0]['long'].max()
+result.update({'max_long': max_long})
+max_lat = dfs[0]['lat'].max()
+result.update({'max_lat': max_lat})
+unique_categoria = dfs[0]['categoria'].unique()
+result.update({'unique_categoria': unique_categoria.tolist()})
+unique_barrio = dfs[0]['barrio'].unique()
+result.update({'unique_barrio': unique_barrio.tolist()})
+unique_comuna = dfs[0]['comuna'].unique()
+result.update({'unique_comuna': unique_comuna.tolist()})
+unique_codigo_postal_argentino = dfs[0]['codigo_postal_argentino'].unique()
+result.update({'unique_codigo_postal_argentino': unique_codigo_postal_argentino.tolist()})
+        ```
+2024-08-30 17:38:28 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:38:28 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:38:28 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+0     -58,36330675  -34,62296347  1602      GUANTANAMERA  ...  Puerto Madero   Comuna 1        1107.0                C1107AFP
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+2822  -58,43986319  -34,60086815  2854          Angelito  ...   Villa Crespo  Comuna 15        1414.0                C1414AHJ
+
+[2823 rows x 18 columns], 'num_records': 2823, 'max_long': '-58,52956509', 'max_lat': '-34,69225645', 'unique_categoria': ['RESTAURANTE', 'VINERIA', 'CAFE', 'BAR', nan, 'PUB', 'CONFITERIA', 'SANDWICHERIA', 'DELIVERY & TAKE AWAY'], 'unique_barrio': ['Puerto Madero', 'San Cristobal', 'Belgrano', 'Villa Lugano', 'Palermo', 'San Nicolas', 'Villa Crespo', 'Recoleta', 'Retiro', 'San Telmo', 'Flores', 'Monserrat', 'Villa Urquiza', 'Balvanera', 'Versalles', 'Boca', 'Constitucion', 'Almagro', 'Velez Sarsfield', 'Mataderos', 'Caballito', 'Parque Avellaneda', 'Villa Ortuzar', 'Villa Del Parque', 'Chacarita', 'NuÃ±ez', 'Villa Santa Rita', 'Liniers', 'Barracas', 'Villa Pueyrredon', 'Nueva Pompeya', 'Colegiales', 'Saavedra', 'Villa Devoto', 'Parque Patricios', 'Villa Real', 'Floresta', 'Boedo', 'Monte Castro', 'Villa Gral. Mitre', 'Villa Riachuelo', 'Villa Luro', 'Coghlan', 'Parque Chacabuco', 'Paternal', 'Agronomia', 'Villa Soldati'], 'unique_comuna': ['Comuna 1', 'Comuna 3', 'Comuna 13', 'Comuna 8', 'Comuna 14', 'Comuna 15', 'Comuna 2', 'Comuna 7', 'Comuna 12', 'Comuna 10', 'Comuna 4', 'Comuna 5', 'Comuna 9', 'Comuna 6', 'Comuna 11'], 'unique_codigo_postal_argentino': ['C1107AFP', nan, 'C1428DNH', 'C1439FTB', 'C1425FFA', 'C1425ABY', 'C1041AAR', 'C1041AAG', 'C1414AFK', 'C1004AAN', 'C1124AAA', 'C1414BKJ', 'C1414BKC', 'C1009ABK', 'C1439BYS', 'C1047AAK', 'C1061AAD', 'C1064AAP', 'C1406EXX', 'C1414BNG', 'C1047AAO', 'C1093ABH', 'C1431FBH', 'C1083ABC', 'C1425DQE', 'C1188AAA', 'C1406EKT', 'C1426EOO', 'C1122AAG', 'C1408AYM', 'C1157ABI', 'C1011ABF', 'C1107AFJ', 'C1098AAH', 'C1094AAN', 'C1203AAQ', 'C1425BIO', 'C1088AAR', 'C1122AAI', 'C1085ABC', 'C1425ASN', 'C1414CYM', 'C1098AAL', 'C1147AAH', 'C1203AAN', 'C1102AAQ', 'C1121ABF', 'C1185ABA', 'C1013AAR', 'C1185AAE', 'C1055AAF', 'C1049AAH', 'C1425BSD', 'C1414BMU', 'C1053ABG', 'C1407DYV', 'C1414BJQ', 'C1004AAL', 'C1048AAD', 'C1041AAH', 'C1440CQC', 'C1425BPF', 'C1414CMY', 'C1424CEE', 'C1406GLH', 'C1414DOO', 'C1087AAB', 'C1425DGL', 'C1424BSF', 'C1407GZX', 'C1406GMR', 'C1225AAM', 'C1427CXW', 'C1419HYS', 'C1405BCM', 'C1067AAA', 'C1093AAC', 'C1098AAX', 'C1037ACA', 'C1112AAM', 'C1073AAN', 'C1003AAE', 'C1088AAL', 'C1425BGP', 'C1425BIP', 'C1425GKB', 'C1414BBQ', 'C1425BMR', 'C1425BGC', 'C1429BMV', 'C1406GMS', 'C1047AAH', 'C1406GMQ', 'C1427EGS', 'C1055ABF', 'C1426BEA', 'C1414BSO', 'C1414DKB', 'C1009ABC', 'C1210AAA', 'C1047AAP', 'C1026AAB', 'C1053ABP', 'C1061AAE', 'C1426DJH', 'C1416EXZ', 'C1426DKB', 'C1408GIA', 'C1408AAY', 'C1414DKD', 'C1424CER', 'C1005AAJ', 'C1059ABT', 'C1155AHC', 'C1195AAS', 'C1406GLK', 'C1235ABB', 'C1268ACV', 'C1147AAP', 'C1414BPO', 'C1074AAN', 'C1092AAL', 'C1153ABE', 'C1439IBB', 'C1005AAC', 'C1179AAR', 'C1431EXX', 'C1428DRZ', 'C1034ACO', 'C1181ACF', 'C1159ABN', 'C1025AAC', 'C1005AAO', 'C1416DJW', 'C1063ACL', 'C1044AAA', 'C1414BMS', 'C1092AAQ', 'C1425BUK', 'C1001ABQ', 'C1107CBB', 'C1425BGX', 'C1414BFH', 'C1425AST', 'C1123AAN', 'C1414CQD', 'C1048AAH', 'C1043AAZ', 'C1414BPP', 'C1414BQD', 'C1015ABQ', 'C1053ABR', 'C1437DOG', 'C1107AAJ', 'C1001AAP', 'C1428BVC', 'C1426AAR', 'C1207AAE', 'C1049AAM', 'C1429EJH', 'C1424CEL', 'C1055AAE', 'C1425BWV', 'C1424CEJ', 'C1162AEH', 'C1207AAG', 'C1414BNE', 'C1051ABE', 'C1414DKJ', 'C1430ABH', 'C1414DGA', 'C1101AAL', 'C1203AAG', 'C1419IBP', 'C1034ACR', 'C1043AAE', 'C1428ARH', 'C1096ABA', 'C1028AAK', 'C1407HUT', 'C1425ECA', 'C1425DGV', 'C1156ADB', 'C1067AAE', 'C1025ABJ', 'C1154AAC', 'C1425DUB', 'C1030AAJ', 'C1067ABC', 'C1027AAF', 'C1427CHE', 'C1133AAO', 'C1426CQE', 'C1187AAB', 'C1041AAM', 'C1083AAR', 'C1414CTS', 'C1115AAI', 'C1102ABD', 'C1242AAU', 'C1209AAC', 'C1425ABL', 'C1189AAH', 'C1041AAZ', 'C1280ACG', 'C1006ACF', 'C1050AAH', 'C1044AAM', 'C1033AAW', 'C1414DCD', 'C1425CDF', 'C1429CCS', 'C1425BMH', 'C1055ABE', 'C1439BSW', 'C1001AAS', 'C1425DUH', 'C1440BBV', 'C1431EZE', 'C1098AAZ', 'C1009ABM', 'C1154AAX', 'C1036AAN', 'C1405CNS', 'C1414CMS', 'C1427CDR', 'C1195AAA', 'C1440ECM', 'C1419IAG', 'C1427EDE', 'C1425BNN', 'C1425BPS', 'C1049AAF', 'C1042AAP', 'C1407AMA', 'C1117ABO', 'C1186ACI', 'C1430AAY', 'C1040AAK', 'C1003AAP', 'C1047AAQ', 'C1101AAE', 'C1425FFD', 'C1025ABB', 'C1004AAM', 'C1414BSH', 'C1138ACK', 'C1036AAE', 'C1037ABC', 'C1189AAJ', 'C1049AAQ', 'C1008AAO', 'C1414DAP', 'C1221ADF', 'C1425BGH', 'C1406AJE', 'C1107CCF', 'C1428CPG', 'C1048AAL', 'C1045AAN', 'C1425DKM', 'C1092AAJ', 'C1034ACN', 'C1428AEC', 'C1431BJJ', 'C1097AAR', 'C1426AJJ', 'C1061AAC', 'C1425ELN', 'C1425BNG', 'C1118AAF', 'C1414DKN', 'C1429BIZ', 'C1052ABA', 'C1107AAD', 'C1038AAJ', 'C1010AAR', 'C1059ABF', 'C1426DAA', 'C1425APP', 'C1003ABV', 'C1406BOT', 'C1425FUA', 'C1015ABR', 'C1121ABE', 'C1023AAO', 'C1407FAB', 'C1049AAL', 'C1113AAL', 'C1425BUP', 'C1044AAJ', 'C1425ADE', 'C1407HFG', 'C1414CPS', 'C1426DHH', 'C1255ABN', 'C1429ABN', 'C1426BQC', 'C1407GOM', 'C1041AAL', 'C1406GKE', 'C1417AAL', 'C1425BKG', 'C1101ABA', 'C1043AAH', 'C1425FCC', 'C1137ACC', 'C1090ABD', 'C1414DDJ', 'C1426BRL', 'C1424CEC', 'C1406GZI', 'C1036AAM', 'C1049AAT', 'C1002ABL', 'C1424CEA', 'C1042ABD', 'C1125ABC', 'C1042AAQ', 'C1429AKI', 'C1007ABH', 'C1414DGB', 'C1172ACD', 'C1111AAD', 'C1414BEH', 'C1425BLA', 'C1002ABN', 'C1033AAG', 'C1127AAD', 'C1120AAU', 'C1113ABA', 'C1406GLR', 'C1120AAS', 'C1425BGA', 'C1424CEB', 'C1097AAG', 'C1121ABL', 'C1427EFK', 'C1416BTD', 'C1267AEI', 'C1414DGC', 'C1424BYR', 'C1250AAT', 'C1100AAC', 'C1166AAN', 'C1166ACA', 'C1041AAK', 'C1431EZC', 'C1426ABN', 'C1088AAN', 'C1416CRT', 'C1425BAA', 'C1045AAB', 'C1043AAJ', 'C1424CCI', 'C1051ACB', 'C1120AAR', 'C1088AAF', 'C1129ABB', 'C1419IFR', 'C1026ABO', 'C1050AAA', 'C1066AAF', 'C1405CBB', 'C1425BGM', 'C1419IBS', 'C1427DNE', 'C1050AAQ', 'C1049AAE', 'C1008AAE', 'C1047AAL', 'C1425BKE', 'C1425BBJ', 'C1048AAK', 'C1419HZC', 'C1424AAQ', 'C1406GDR', 'C1042AAB', 'C1429DUB', 'C1405DJE', 'C1112AAI', 'C1425ABV', 'C1425DBM', 'C1018ADD', 'C1014ACQ', 'C1076AAL', 'C1054AAD', 'C1416BTW', 'C1009ABO', 'C1059ABD', 'C1129ABN', 'C1162ABI', 'C1016ACB', 'C1064AAF', 'C1041AAJ', 'C1076AAF', 'C1280AEA', 'C1019ABM', 'C1416AAJ', 'C1026ABB', 'C1084AAD', 'C1038AAQ', 'C1009ABW', 'C1426AAM', 'C1425AAV', 'C1086AAN', 'C1406GLA', 'C1414BMK', 'C1414DNW', 'C1414CHU', 'C1428CQJ', 'C1066AAL', 'C1428BJR', 'C1160ABL', 'C1426BRF', 'C1414DRE', 'C1095ABC', 'C1426BSC', 'C1425DEX', 'C1407AVF', 'C1055AAB', 'C1125ABB', 'C1425BDE', 'C1033AAO', 'C1414AJN', 'C1121ABN', 'C1425FOJ', 'C1006ACE', 'C1428ABB', 'C1025ABH', 'C1008AAD', 'C1406FXB', 'C1068AAD', 'C1043ABN', 'C1424BSQ', 'C1431FON', 'C1104AKC', 'C1414BNC', 'C1119AAD', 'C1161AAN', 'C1425DGQ', 'C1414BFC', 'C1120AAC', 'C1041AAT', 'C1031ABG', 'C1408DSJ', 'C1116ABH', 'C1033AAJ', 'C1425BEE', 'C1102AAM', 'C1004AAK', 'C1426CUE', 'C1081AAF', 'C1054AAG', 'C1414AWM', 'C1099AAD', 'C1044AAI', 'C1439COM', 'C1425BVJ', 'C1419HYG', 'C1419HZR', 'C1042ABH', 'C1424BYW', 'C1045AAA', 'C1094ABC', 'C1270AAY', 'C1029AAF', 'C1026ABC', 'C1040AAA', 'C1116ABG', 'C1111AAG', 'C1430EEO', 'C1425DEE', 'C1119ACI', 'C1136ABH', 'C1053ABM', 'C1440BBW', 'C1406AEB', 'C1151ABC', 'C1439FUC', 'C1015ABF', 'C1429BMM', 'C1074AAD', 'C1060AAE', 'C1001ABU', 'C1408AKL', 'C1429DUA', 'C1049AAS', 'C1293ACE', 'C1419IAC', 'C1124AAH', 'C1440ADD', 'C1407EOJ', 'C1042ABC', 'C1225AAS', 'C1406AJT', 'C1414CID', 'C1426EGR', 'C1074AAO', 'C1288AEH', 'C1173ABV', 'C1051ABF', 'C1407ELY', 'C1428AAP', 'C1406FYK', 'C1424BYS', 'C1008AAN', 'C1003ABN', 'C1005AAK', 'C1406GMD', 'C1049AAK', 'C1113AAS', 'C1407BNZ', 'C1425BDD', 'C1235ABE', 'C1428AEJ', 'C1414BGK', 'C1414DAQ', 'C1430DVW', 'C1195AAF', 'C1123AAG', 'C1425DHB', 'C1439DBK', 'C1003ABF', 'C1430BKP', 'C1419HZJ', 'C1414AOM', 'C1119AAC', 'C1092AAC', 'C1406EKM', 'C1426DKA', 'C1425BLD', 'C1107AFI', 'C1207ABE', 'C1414CMT', 'C1128ACH', 'C1425ASI', 'C1022AAN', 'C1073AAM', 'C1008AAH', 'C1028AAD', 'C1406EKX', 'C1425BHH', 'C1102ABB', 'C1414AJU', 'C1430AZI', 'C1089AAD', 'C1414CHW', 'C1406GDC', 'C1428DRA', 'C1439FQN', 'C1425EKX', 'C1054AAS', 'C1043AAR', 'C1425BMW', 'C1414ALN', 'C1002ABK', 'C1407GPS', 'C1039AAN', 'C1250AAD', 'C1424CED', 'C1207AAC', 'C1431EZK', 'C1003ABI', 'C1199ACK', 'C1003ABR', 'C1010ABB', 'C1093ABA', 'C1038AAW', 'C1426AKH', 'C1414CMR', 'C1203AAO', 'C1426BSE', 'C1090AAS', 'C1414COU', 'C1124AAK', 'C1004AAS', 'C1031ABI', 'C1414DKA', 'C1113AAX', 'C1414BKI', 'C1203AAT', 'C1425AAX', 'C1113AAO', 'C1007ABG', 'C1008AAL', 'C1040AAD', 'C1003ABT', 'C1111AAJ', 'C1425BRY', 'C1175ABW', 'C1428BCX', 'C1414DIL', 'C1004AAG', 'C1058AAT', 'C1143AAE', 'C1407GPT', 'C1118AAS', 'C1425DFB', 'C1425BGK', 'C1425AYN', 'C1118AAO', 'C1001ABP', 'C1425BGN', 'C1008AAI', 'C1007AAB', 'C1439DBO', 'C1127AAC', 'C1407CBB', 'C1218AAD', 'C1205AAO', 'C1060AAB', 'C1429DUT', 'C1199ACL', 'C1425BBR', 'C1265AEA', 'C1181ADB', 'C1414BMV', 'C1093AAP', 'C1425BRO', 'C1059ABC', 'C1249ABM', 'C1419ICG', 'C1136ABI', 'C1416DJX', 'C1414BBB', 'C1095AAD', 'C1414BNH', 'C1175ABS', 'C1425DPH', 'C1037ACC', 'C1414BNF', 'C1002ABP', 'C1425EZI', 'C1430BRN', 'C1426AGV', 'C1406EKW', 'C1147AAR', 'C1414DNV', 'C1097AAL', 'C1067AAD', 'C1174ABH', 'C1431FAA', 'C1416DRD', 'C1414CUB', 'C1419EQJ', 'C1425BYH', 'C1426CRG', 'C1427CHA', 'C1041AAN', 'C1097AAX', 'C1440ABC', 'C1425BTP', 'C1414AIA', 'C1414CEQ', 'C1050AAJ', 'C1091AAY', 'C1226AAB', 'C1426BWX', 'C1003ABO', 'C1414BND', 'C1064AAO', 'C1414CTV', 'C1425BHQ', 'C1416DRZ', 'C1048AAM', 'C1425BTJ', 'C1264AAO', 'C1425BYG', 'C1426BRD', 'C1001AAO', 'C1092AAT', 'C1437IYN', 'C1038ABA', 'C1095AAY', 'C1095AAC', 'C1428ARR', 'C1036AAO', 'C1098AAI', 'C1427AAT', 'C1006ACI', 'C1430EBR', 'C1120AAG', 'C1426DHE', 'C1416ANA', 'C1039AAP', 'C1260ABA', 'C1044AAE', 'C1419HZI', 'C1406FYU', 'C1220ADF', 'C1064AAH', 'C1161AEH', 'C1430ABG', 'C1424BSG', 'C1406GMU', 'C1425BNE', 'C1439BSG', 'C1270ABN', 'C1425ASG', 'C1425BEN', 'C1424CET', 'C1259AAO', 'C1408BXD', 'C1426EJS', 'C1066AAW', 'C1440AAM', 'C1425BKL', 'C1429EJE', 'C1093ABD', 'C1010AAF', 'C1416CZP', 'C1407DYF', 'C1004AAO', 'C1046AAB', 'C1406GLX', 'C1043AAU', 'C1407BOB', 'C1428CQM', 'C1292AAB', 'C1169AAD', 'C1053ACA', 'C1424BSA', 'C1440BBB', 'C1013AAS', 'C1405DCX', 'C1060AAD', 'C1076AAA', 'C1419ICS', 'C1430EEB', 'C1440ECL', 'C1039AAJ', 'C1207ABP', 'C1102AAH', 'C1425FOK', 'C1073AAE', 'C1439CLU', 'C1081ABD', 'C1165AGD', 'C1053ACB', 'C1184ABK', 'C1102AAK', 'C1414DFE', 'C1001AAB', 'C1425BAF', 'C1429ABS', 'C1039AAO', 'C1425BHP', 'C1406HAC', 'C1414CSA', 'C1042AAC', 'C1137ACG', 'C1264AAK', 'C1086AAS', 'C1172ACH', 'C1406EXP', 'C1022AAR', 'C1244ABS', 'C1408FGT', 'C1419IAB', 'C1419EQR', 'C1407DYG', 'C1154AAE', 'C1264AAI', 'C1086AAU', 'C1417BWZ', 'C1427BPG', 'C1002AAF', 'C1113AAN', 'C1424BYQ', 'C1251ABD', 'C1429AAW', 'C1407EJG', 'C1414BTI', 'C1093AAR', 'C1199ABG', 'C1416CSI', 'C1419EQD', 'C1414BKL', 'C1101AAH', 'C1053ABD', 'C1092AAO', 'C1428BLS', 'C1114AAR', 'C1426CTG', 'C1034ACT', 'C1264AAT', 'C1225AAP', 'C1147AAQ', 'C1157ADB', 'C1041AAO', 'C1406EKZ', 'C1406BOV', 'C1437JEH', 'C1047AAT', 'C1270AAK', 'C1008AAF', 'C1104AJQ', 'C1010AAV', 'C1003ABE', 'C1140ABD', 'C1276ACK', 'C1425BSM', 'C1065AAT', 'C1431CAP', 'C1416DSV', 'C1425BSN', 'C1098AAG', 'C1407GOU', 'C1424BXH', 'C1027AAE', 'C1427EDP', 'C1038AAM', 'C1439CMC', 'C1426BRI', 'C1270ABR', 'C1294ABC', 'C1159ABC', 'C1414DGD', 'C1275AGH', 'C1067AAH', 'C1154AAY', 'C1053ABT', 'C1425FQI', 'C1026ABG', 'C1070AAV', 'C1065AAM', 'C1265ACB', 'C1439BTK', 'C1414CMV', 'C1055ABA', 'C1001AAN', 'C1425BTC', 'C1074AAI', 'C1424BSP', 'C1419EQT', 'C1406HMV', 'C1407HUR', 'C1003ABL', 'C1425DUJ', 'C1085ABQ', 'C1419HZG', 'C1178ABA', 'C1414BHM', 'C1055ABB', 'C1424CIE', 'C1061ABD', 'C1424BJL', 'C1405BVC', 'C1055AAC', 'C1414CKL', 'C1407IKM', 'C1414BAY', 'C1061ABB', 'C1073AAG', 'C1123AAQ', 'C1033AAC', 'C1406FVM', 'C1417COP', 'C1043AAL', 'C1099AAC', 'C1083AAO', 'C1430BLB', 'C1079ABQ', 'C1431CAW', 'C1414BKF', 'C1055AAQ', 'C1054ABC', 'C1427EDN', 'C1046AAP', 'C1225ABA', 'C1026ABN', 'C1426BTI', 'C1431EZL', 'C1035ABA', 'C1425BYL', 'C1414BWJ', 'C1414DMK', 'C1017AAK', 'C1406GRI', 'C1218AAF', 'C1233ABG', 'C1429DEG', 'C1092AAS', 'C1107AFL', 'C1426AGS', 'C1425BBY', 'C1054AAU', 'C1049AAN', 'C1102AAN', 'C1035ABG', 'C1440AAN', 'C1054AAI', 'C1086AAB', 'C1425EVG', 'C1017AAN', 'C1030AAN', 'C1426CQS', 'C1002ABD', 'C1428AAI', 'C1406GWF', 'C1111AAH', 'C1056ABH', 'C1262AAC', 'C1040AAP', 'C1025AAH', 'C1440BBO', 'C1425BMQ', 'C1056ABB', 'C1180ACH', 'C1009ABU', 'C1425FQL', 'C1406GLI', 'C1407DYU', 'C1416DJV', 'C1426CPQ', 'C1060ABP', 'C1414CXH', 'C1015ABD', 'C1425BRL', 'C1425FNI', 'C1002ABH', 'C1005AAD', 'C1117ABB', 'C1406GME', 'C1048AAI', 'C1250AAF', 'C1115AAL', 'C1427CEQ', 'C1431FAN', 'C1406EXN', 'C1004AAJ', 'C1437FBD', 'C1425BEM', 'C1083AAC', 'C1414CEA', 'C1429ABD', 'C1119ACC', 'C1424CIT', 'C1426CQO', 'C1428DNO', 'C1414DIJ', 'C1002ABA', 'C1417ALA', 'C1428CQK', 'C1427CCF', 'C1006ACJ', 'C1189AAP', 'C1094ABN', 'C1029AAI', 'C1040AAO', 'C1225AAR', 'C1120AAH', 'C1428BKU', 'C1425DBZ', 'C1041AAY', 'C1419EQV', 'C1414AJS', 'C1425EYK', 'C1038AAH', 'C1426CQU', 'C1089AAL', 'C1180ACD', 'C1002ABO', 'C1068AAG', 'C1098ABD', 'C1067ABN', 'C1003ABM', 'C1425DBF', 'C1425BRE', 'C1425FBG', 'C1408CPK', 'C1141ACD', 'C1003AAN', 'C1063ACC', 'C1113AAI', 'C1112ABO', 'C1113AAG', 'C1086AAF', 'C1414BQJ', 'C1425BSR', 'C1414BTJ', 'C1187AAG', 'C1038AAR', 'C1414DIK', 'C1055AAS', 'C1427CEY', 'C1414COW', 'C1424CIF', 'C1174ABX', 'C1057AAH', 'C1425DGT', 'C1008AAP', 'C1414DRZ', 'C1055ABC', 'C1107AAF', 'C1107CKF', 'C1043AAW', 'C1425ATN', 'C1425BGT', 'C1119ACO', 'C1118AAQ', 'C1204AAQ', 'C1425BMU', 'C1425BUN', 'C1426BSO', 'C1107AAX', 'C1425BHO', 'C1414BNL', 'C1086AAJ', 'C1221ADB', 'C1035ABH', 'C1116ABF', 'C1414CLN', 'C1414CLA', 'C1405BAQ', 'C1128ACF', 'C1057AAE', 'C1001ABW', 'C1044AAC', 'C1022AAB', 'C1038AAI', 'C1275AGQ', 'C1407FIR', 'C1085ABO', 'C1055AAD', 'C1416DJU', 'C1169AAA', 'C1425EGK', 'C1425DQC', 'C1059ABH', 'C1043AAM', 'C1011ABB', 'C1425BBQ', 'C1023AAE', 'C1426CTF', 'C1107CDA', 'C1061AAH', 'C1408AAW', 'C1426DYE', 'C1430ABE', 'C1070AAP', 'C1086AAG', 'C1427CCE', 'C1047AAR', 'C1002AAS', 'C1057AAD', 'C1205AAP', 'C1425EVE', 'C1072AAH', 'C1424CCH', 'C1013AAH', 'C1187AAP', 'C1414AJT', 'C1011ABG', 'C1425BEJ', 'C1019ABJ', 'C1011AAE', 'C1047AAI', 'C1429BST', 'C1426EOW', 'C1027AAI', 'C1437DCG', 'C1405CND', 'C1430BKB', 'C1188AAB', 'C1429AJC', 'C1425AWF', 'C1425BHV', 'C1431FBU', 'C1428DNA', 'C1058AAA', 'C1225AAN', 'C1430AIK', 'C1094ABE', 'C1022AAQ', 'C1044AAF', 'C1419IGJ', 'C1425BNK', 'C1022AAA', 'C1407HGU', 'C1084AAQ', 'C1431APD', 'C1006ACD', 'C1414DDG', 'C1424BSC', 'C1268ACP', 'C1003ABG', 'C1089AAJ', 'C1044AAG', 'C1406AJP', 'C1125ABE', 'C1425BLH', 'C1054AAQ', 'C1058AAQ', 'C1129ABO', 'C1074AAC', 'C1437DOE', 'C1419ERP', 'C1408CPJ', 'C1406GJM', 'C1160ABM', 'C1414DON', 'C1405CRU', 'C1101AAI', 'C1162AEC', 'C1407EMB', 'C1107AAL', 'C1407HAP', 'C1414BGQ', 'C1425AYA', 'C1414CTP', 'C1406GRO', 'C1161AAM', 'C1037ABF', 'C1022AAO', 'C1186AAR', 'C1183AER', 'C1154AAJ', 'C1230AAP', 'C1065AAR', 'C1425BEC', 'C1426AGG', 'C1414CKM', 'C1043AAT', 'C1049AAR', 'C1162ABN', 'C1102AAF', 'C1209AAO', 'C1113AAC', 'C1440EVB', 'C1087AAE', 'C1153ABW', 'C1162ABM', 'C1098AAR', 'C1425EUH', 'C1425BWC', 'C1405DJN', 'C1022AAD', 'C1408ABN', 'C1437DOP', 'C1079ABE', 'C1424CEW', 'C1022AAP', 'C1416CSP', 'C1426DJE', 'C1066AAT', 'C1186AAG', 'C1427EDF', 'C1137ABB', 'C1416AJR', 'C1437EIM', 'C1427ASA', 'C1414BGV', 'C1260AAG', 'C1407DYX', 'C1425ECC', 'C1268ACH', 'C1006ACH', 'C1414CTU', 'C1425AUK', 'C1407AOC', 'C1417FOL', 'C1053ABH', 'C1425BVP', 'C1425BNS', 'C1406GWD', 'C1425BCA', 'C1047AAS', 'C1141AAA', 'C1047AAN', 'C1406GSI', 'C1160ABN', 'C1424BSX', 'C1051ABA', 'C1264AAV', 'C1431BZR', 'C1406GZZ', 'C1066AAR', 'C1209ABD', 'C1425DGI', 'C1428AAV', 'C1155AER', 'C1408ABQ', 'C1123AAA', 'C1431CAN', 'C1264AAJ', 'C1419ICK', 'C1176ADC', 'C1003AAR', 'C1288AFC', 'C1426BRG', 'C1424BYJ', 'C1425ADF', 'C1122AAK', 'C1008AAB', 'C1440ECZ', 'C1195AAN', 'C1439BSA', 'C1042AAA', 'C1425FWC', 'C1079AAA', 'C1033AAX', 'C1429BSI', 'C1419AAD', 'C1019ABL', 'C1148ABH', 'C1426BUJ', 'C1049AAP', 'C1408CPH', 'C1425DUU', 'C1095AAI', 'C1407GZE', 'C1406EXB', 'C1407DYB', 'C1425ASE', 'C1055ABG', 'C1426BRH', 'C1427CDA', 'C1406HKS', 'C1123AAP', 'C1419HZF', 'C1161ACD', 'C1038AAZ', 'C1117ABL', 'C1424BYE', 'C1288AFA', 'C1425BHT', 'C1428ARW', 'C1428BSJ', 'C1407KBR', 'C1288AEC', 'C1429AAU', 'C1225AAC', 'C1111AAF', 'C1425DTP', 'C1406GMN', 'C1431AAU', 'C1406GWQ', 'C1407BOC', 'C1042AAD', 'C1414BSN', 'C1437GYP', 'C1407GPL', 'C1425BOH', 'C1155ACB', 'C1107AAV', 'C1414DLJ', 'C1425BTD', 'C1425BTL', 'C1089AAO', 'C1029AAM', 'C1419GDB', 'C1034ACF', 'C1440AAT', 'C1429BTJ', 'C1425BKO', 'C1425FIJ', 'C1414BFK', 'C1427BZS', 'C1261ACN', 'C1169AAC', 'C1083AAN', 'C1425GKD', 'C1425ASM', 'C1151ABH', 'C1100AAB', 'C1431APX', 'C1414DFF', 'C1429ADW', 'C1425FFH', 'C1091AAQ', 'C1057AAU', 'C1407DYW', 'C1406GZD', 'C1269ACA', 'C1259ABE', 'C1428AAU', 'C1195AAQ', 'C1416DRG', 'C1087AAF', 'C1425FQM', 'C1112ADD', 'C1425DSN', 'C1419EQU', 'C1407GPI', 'C1053ABQ', 'C1427CDN', 'C1414ADH', 'C1437DOB', 'C1425APM', 'C1040AAH', 'C1414DLP', 'C1426BSD', 'C1424BYN', 'C1043AAV', 'C1203AAP', 'C1026ABD', 'C1215ACS', 'C1195AAB', 'C1039AAG', 'C1091ABB', 'C1066AAS', 'C1003ABX', 'C1428BKV', 'C1049AAI', 'C1120AAA', 'C1047AAM', 'C1264AAN', 'C1011ABA', 'C1419HZE', 'C1437JCE', 'C1204AAD', 'C1022AAT', 'C1426CQF', 'C1260ABO', 'C1239AAF', 'C1013AAQ', 'C1427CEG', 'C1406FQZ', 'C1038AAT', 'C1137ACN', 'C1079ABR', 'C1439FUE', 'C1426BTM', 'C1414CMQ', 'C1166ACB', 'C1097ABD', 'C1425BVL', 'C1074AAJ', 'C1028AAF', 'C1430BKN', 'C1431BZE', 'C1405BRF', 'C1414BNK', 'C1426DZD', 'C1406GTA', 'C1427CCI', 'C1414CKE', 'C1425AWI', 'C1129AAA', 'C1126AAA', 'C1002ABM', 'C1027AAH', 'C1426AAJ', 'C1424DET', 'C1134ADG', 'C1062ACA', 'C1031ABM', 'C1059ABS', 'C1078AAP', 'C1406HAQ', 'C1062ABE', 'C1064AAM', 'C1425API', 'C1408DSA', 'C1425ABH', 'C1408FGU', 'C1428CTU', 'C1430CCE', 'C1406HMS', 'C1091AAD', 'C1035ABF', 'C1431CGG', 'C1416DRE', 'C1428ADK', 'C1414DZD', 'C1414DID', 'C1091AAC', 'C1261AAR', 'C1268ACJ', 'C1425EGN', 'C1226AAE', 'C1428DNR', 'C1406GST', 'C1107CBJ', 'C1414BSI', 'C1097ABE', 'C1414CHV', 'C1429BTE', 'C1406HNI', 'C1431FBB', 'C1439AGF', 'C1440ECF', 'C1437FEE', 'C1270AAV', 'C1424BSD', 'C1416EYD', 'C1405DJG', 'C1406EXO', 'C1079ABO', 'C1426CPG', 'C1006ACA', 'C1154AAL', 'C1036AAY', 'C1048AAO', 'C1043ABA', 'C1430BLD', 'C1123AAR', 'C1414CEF', 'C1204AAE', 'C1244ABM', 'C1115AAN', 'C1405DJU', 'C1429ABE', 'C1419IBE', 'C1260AAS', 'C1440ATG', 'C1426DHF', 'C1426DQW', 'C1426AJV', 'C1425BKW', 'C1189AAG', 'C1425BBZ', 'C1437GRH', 'C1425DTT', 'C1106ABF', 'C1094AAD', 'C1091AAH', 'C1043AAP', 'C1010AAJ', 'C1425BCB', 'C1107AAU', 'C1428DHR', 'C1437JMQ', 'C1406GSE', 'C1425ATO', 'C1428BLU', 'C1424AAD', 'C1425BHR', 'C1414BMO', 'C1175ABR', 'C1092AAG', 'C1425BNM', 'C1425DUP', 'C1052ABD', 'C1414BSJ', 'C1405BND', 'C1426BRE', 'C1250AAW', 'C1414CTO', 'C1023AAN', 'C1414DKE', 'C1429DAC', 'C1425ECB', 'C1405DJX', 'C1004AAD', 'C1152ABP', 'C1407DYD', 'C1040AAL', 'C1024AAG', 'C1154AAF', 'C1425APT', 'C1012AAU', 'C1425BBS', 'C1098AAQ', 'C1428ADQ', 'C1431EZJ', 'C1425DHR', 'C1407HFN', 'C1414DOP', 'C1057AAM', 'C1426BTP', 'C1425BKF', 'C1425EFI', 'C1425BGY', 'C1414BPK', 'C1425BKV', 'C1270ABQ', 'C1406DXB', 'C1054AAH', 'C1209ABE', 'C1034ACQ', 'C1159ADC', 'C1267ABD', 'C1032ABI', 'C1093ABC', 'C1425BHN', 'C1089AAB', 'C1039AAH', 'C1005AAS', 'C1424CEY', 'C1406GLN', 'C1034ACA', 'C1107AAR', 'C1133AAJ', 'C1250AAU', 'C1431FBW', 'C1429BMR', 'C1084AAO', 'C1431EZY', 'C1440ABZ', 'C1440ABY', 'C1408DSI', 'C1417ABD', 'C1268ABP', 'C1064ADB', 'C1123AAT', 'C1060ABN', 'C1060ABD', 'C1123AAO', 'C1188AAE', 'C1406GLW', 'C1027AAA', 'C1046AAQ', 'C1193AAE', 'C1203AAD', 'C1032ABP', 'C1425BHI', 'C1425DBO', 'C1426AAU', 'C1425DFP', 'C1428AAR', 'C1428AAH', 'C1428ARQ', 'C1426BOT', 'C1425AYW', 'C1186ACF', 'C1419ICA', 'C1069AAV', 'C1195AAP', 'C1414BSF', 'C1016ACH', 'C1037ACE', 'C1030AAF', 'C1047AAD', 'C1051ABB', 'C1235ABP', 'C1428BKP', 'C1425AYF', 'C1204AAO', 'C1431CGN', 'C1426BTN', 'C1429COW', 'C1440ACZ', 'C1018ADB', 'C1426AGU', 'C1425DED', 'C1135AAI', 'C1406GRP', 'C1119ACB', 'C1425DQQ', 'C1419HDR', 'C1426BRC', 'C1295ADE', 'C1416CRQ', 'C1407ANL', 'C1437EYG', 'C1416DRB', 'C1425CKO', 'C1107CHH', 'C1062ABM', 'C1064AAN', 'C1428AAA', 'C1064AFC', 'C1425BTE', 'C1270ABC', 'C1270AAB', 'C1205AAB', 'C1095AAP', 'C1407GZM', 'C1426AGY', 'C1426AEE', 'C1038AAG', 'C1270ABO', 'C1414DMC', 'C1270AAP', 'C1414DEZ', 'C1034ACE', 'C1101AAT', 'C1010AAB', 'C1425CKM', 'C1425AWJ', 'C1425DFN', 'C1426CRF', 'C1407FIX', 'C1416DSS', 'C1050AAG', 'C1036AAW', 'C1419IBD', 'C1029AAE', 'C1017AAL', 'C1051ABC', 'C1425APN', 'C1045AAP', 'C1195AAC', 'C1428BXP', 'C1416DST', 'C1414BFD', 'C1419FSS', 'C1063ADA', 'C1428AKF', 'C1414AHZ', 'C1405DJT', 'C1425AYG', 'C1428DHK', 'C1067ABA', 'C1425DUX', 'C1425BEB', 'C1045ABE', 'C1424AAI', 'C1425BWG', 'C1055AAT', 'C1006ACG', 'C1023AAP', 'C1425DEJ', 'C1125AAF', 'C1022AAG', 'C1416DRC', 'C1425BLB', 'C1407ELZ', 'C1428ADB', 'C1425DUD', 'C1416DSP', 'C1426BTU', 'C1024AAQ', 'C1282AFR', 'C1177AFB', 'C1414DJK', 'C1115AAB', 'C1070AAR', 'C1408CPE', 'C1425ELA', 'C1126AAE', 'C1425FQV', 'C1408BSI', 'C1098AAT', 'C1042ABG', 'C1429EFP', 'C1107CPE', 'C1425DBC', 'C1428DMS', 'C1426CUC', 'C1068AAL', 'C1425DQA', 'C1429BSS', 'C1088AAQ', 'C1426ABP', 'C1078AAE', 'C1127AAN', 'C1414CTM', 'C1425BBD', 'C1425BVG', 'C1414DAL', 'C1406GYJ', 'C1032ABJ', 'C1263AAS', 'C1013AAF', 'C1119ACN', 'C1414DMF', 'C1425FIG', 'C1408AAG', 'C1425FQN', 'C1119ACA', 'C1263AAB', 'C1408AKW', 'C1416DLB', 'C1270AAA', 'C1406GSF', 'C1425ELF', 'C1117ABF', 'C1112ABN', 'C1425DKX', 'C1112ABP', 'C1238ACM', 'C1425DBW', 'C1103ABA', 'C1133AAH', 'C1425BEH', 'C1116ABI', 'C1405DJA', 'C1414DPY', 'C1017AAM', 'C1427BXI', 'C1009ABS', 'C1114AAE', 'C1025ABA', 'C1270AAQ', 'C1419IBR', 'C1425BLE', 'C1424AAU', 'C1429AAX', 'C1430DGV', 'C1439BSC', 'C1200AAJ', 'C1405BAU', 'C1424AMD', 'C1055AAH', 'C1425GAR', 'C1100ABE', 'C1406FQX', 'C1424AHB', 'C1091AAX', 'C1263AAH', 'C1259AAN', 'C1016AAE', 'C1424CEI', 'C1405DCF', 'C1050AAC', 'C1166AEA', 'C1429ADS', 'C1425DBY', 'C1405DCJ', 'C1424BSN', 'C1054AAV', 'C1419FSF', 'C1406AIA', 'C1414DNP', 'C1184AAN', 'C1425AAT', 'C1426ABQ', 'C1118AAR', 'C1009ABG', 'C1425EVB', 'C1023AAG', 'C1120AAN', 'C1028AAO', 'C1012AAT', 'C1425EFC', 'C1424BLF', 'C1055AAU', 'C1023AAQ', 'C1426AAL', 'C1428AFD', 'C1425ASF', 'C1414CMZ', 'C1158ACR', 'C1125AAC', 'C1406GOC', 'C1230ABK', 'C1204AAA', 'C1425BQB', 'C1057AAV', 'C1012AAV', 'C1024AAB', 'C1426AAY', 'C1017AAH', 'C1187AAE', 'C1425BGO', 'C1428DQQ', 'C1140AAD', 'C1090AAT', 'C1275AAK', 'C1038ABB', 'C1424DES', 'C1406EKV', 'C1431FCU', 'C1408ABP', 'C1042ABE', 'C1072AAT', 'C1424CEF', 'C1425ASJ', 'C1011ABE', 'C1431CGI', 'C1424BSU', 'C1417FNV', 'C1428AAG', 'C1260AAI', 'C1407GOH', 'C1406HNA', 'C1425BPG', 'C1030AAB', 'C1161AAL', 'C1187AAH', 'C1414AJV', 'C1406DGL', 'C1030AAM', 'C1429BID', 'C1431DOJ', 'C1431BVP', 'C1406CQI', 'C1137ACF', 'C1424CEP', 'C1424CEN', 'C1425BGW', 'C1425BGU', 'C1065AAS', 'C1001ABO', 'C1095ABA', 'C1049AAC', 'C1424CEG', 'C1405AHC', 'C1112ABC', 'C1414DKL', 'C1042AAN', 'C1428AAB', 'C1425ASD', 'C1406GZO', 'C1036AAU', 'C1128AAC', 'C1176ABZ', 'C1058AAC', 'C1425DEK', 'C1255AAF', 'C1011ABJ', 'C1133AAP', 'C1113AAT', 'C1245ABB', 'C1427DNT', 'C1429CQE', 'C1425BMA', 'C1095AAZ', 'C1116ABE', 'C1425AWK', 'C1005AAE', 'C1026ABE', 'C1117ABC', 'C1207ABD', 'C1414BJR', 'C1424CCR', 'C1407ANH', 'C1033AAB', 'C1102AAA', 'C1169AAF', 'C1428CTG', 'C1166AAO', 'C1143AAD', 'C1440CLV', 'C1408IGX', 'C1019ABO', 'C1406GMF', 'C1429AVS', 'C1429BNT', 'C1406ILD', 'C1023AAS', 'C1118AAG', 'C1425BSQ', 'C1437GNE', 'C1414CQF', 'C1022AAC', 'C1414AGR', 'C1440CLS', 'C1085ABB', 'C1425DQH', 'C1428AAQ', 'C1221ADD', 'C1016ABA', 'C1112ABD', 'C1050AAK', 'C1021AAA', 'C1440ABT', 'C1426EJC', 'C1186ABA', 'C1184ABH', 'C1024AAF', 'C1425FRB', 'C1026ABM', 'C1099AAL', 'C1406ETJ', 'C1407HUU', 'C1126AAD', 'C1185AAP', 'C1114AAS', 'C1007ABD', 'C1019ABT', 'C1184AAC', 'C1057AAI', 'C1162AEN', 'C1425DHK', 'C1051ACA', 'C1192ACE', 'C1408GIB', 'C1414COX', 'C1074AAL', 'C1197AAS', 'C1116ABD', 'C1044AAH', 'C1425BGG', 'C1424AAO', 'C1036AAX', 'C1427EDA', 'C1425AAM', 'C1425FVB', 'C1425AYJ', 'C1124AAE', 'C1427CCN', 'C1425CKJ', 'C1114AAK', 'C1431CIO', 'C1429AAZ', 'C1014ADA', 'C1425ASL', 'C1428DQN', 'C1425BVE', 'C1425DTO', 'C1091AAO', 'C1088AAE', 'C1084ABC', 'C1414BWK', 'C1414BPL', 'C1190ABB', 'C1424CII', 'C1440DYK', 'C1414AQR', 'C1406ACB', 'C1428DNE', 'C1419IAT', 'C1264AAE', 'C1405DJV', 'C1044AAD', 'C1080ABF', 'C1407HUA', 'C1406GZU', 'C1151AAJ', 'C1263AAV', 'C1406GLY', 'C1250AAG', 'C1121ABK', 'C1270AAX', 'C1256ABN', 'C1017AAR', 'C1407GPE', 'C1073AAC', 'C1407AUA', 'C1143AAA', 'C1068AAK', 'C1002ABF', 'C1004AAP', 'C1414BSM', 'C1414DCW', 'C1425FBI', 'C1037ACH', 'C1125AAE', 'C1054AAT', 'C1025ABF', 'C1425DTH', 'C1414BGM', 'C1440ABI', 'C1425EEA', 'C1425FRD', 'C1028AAP', 'C1406CXT', 'C1414BMT', 'C1425BBB', 'C1078AAF', 'C1041AAP', 'C1037ACF', 'C1426AAT', 'C1425FOQ', 'C1107AAP', 'C1226AAA', 'C1080ABN', 'C1040AAJ', 'C1406GMO', 'C1429CLJ', 'C1414DWC', 'C1053ABN', 'C1036AAQ', 'C1414BKD', 'C1428CRJ', 'C1419GDO', 'C1100ACB', 'C1009ABI', 'C1046AAA', 'C1439CJZ', 'C1235ABA', 'C1426BUL', 'C1424BSV', 'C1419BDH', 'C1414BKE', 'C1425FRF', 'C1425BBH', 'C1406GZQ', 'C1425EEC', 'C1187AAN', 'C1406ARA', 'C1424AAH', 'C1123AAF', 'C1057AAG', 'C1426ABO', 'C1440AAL', 'C1116ABJ', 'C1102AAJ', 'C1425BSF', 'C1408AKX', 'C1101AAJ', 'C1425DQR', 'C1007ABB', 'C1426CXC', 'C1119ACR', 'C1414CEB', 'C1406GLS', 'C1414AZK', 'C1424BSR', 'C1428ARG', 'C1406AMF', 'C1037ACG', 'C1414BQC', 'C1037ACD', 'C1015ABB', 'C1041ABA', 'C1406ABB', 'C1425BRR', 'C1187AAA', 'C1417FNJ', 'C1408AAI', 'C1015ABO', 'C1226AAI', 'C1181ACE', 'C1129ACC', 'C1414BNB', 'C1016ACC', 'C1122AAM', 'C1205AAE', 'C1427CCT', 'C1408AAV', 'C1058AAS', 'C1406GZA', 'C1407HGQ', 'C1426CQH', 'C1033AAE', 'C1235ABS', 'C1019ABI', 'C1048AAF', 'C1414DEX', 'C1429AZR', 'C1425DEL', 'C1430BLN', 'C1425FFB', 'C1414BJP', 'C1041AAS', 'C1097ABA', 'C1270AAS', 'C1102AAP', 'C1054AAP', 'C1407ANB', 'C1426DJA', 'C1425BVO', 'C1072AAB', 'C1161AEF', 'C1425DBP', 'C1425DEC', 'C1419DFW', 'C1054AAC', 'C1425BHU', 'C1002ABI', 'C1407HTY', 'C1125ABF', 'C1104AJO', 'C1419HZK', 'C1425ASO', 'C1408CPL', 'C1040AAE', 'C1431FBA', 'C1405CLB', 'C1440ECY', 'C1414BQG', 'C1143AAM', 'C1414DDM', 'C1065AAE', 'C1195AAR', 'C1417DTQ', 'C1425BUF', 'C1414DLL', 'C1424AYG', 'C1406GZB', 'C1406GWP', 'C1414DCA', 'C1428CRC', 'C1429BJG', 'C1001ABR', 'C1001AAQ', 'C1429AAP', 'C1192ACI', 'C1407DYQ', 'C1405CNX', 'C1426DHG', 'C1414DAM', 'C1118AAP', 'C1406ELB', 'C1406GLL', 'C1045AAO', 'C1029AAP', 'C1429BIV', 'C1050AAP', 'C1414AHJ']}
+2024-08-30 17:38:28 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:39:05 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 17:39:05 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:39:05 [INFO] Prompt ID: ab5c112e-c9d7-48b4-ae49-e1062d238ae8
+2024-08-30 17:39:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:39:05 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:39:05 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:39:05 [INFO] Using cached response
+2024-08-30 17:39:05 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:39:05 [INFO] Executing Step 2: Skipping...
+2024-08-30 17:39:05 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:39:05 [INFO] Executing Step 3: Skipping...
+2024-08-30 17:39:05 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:39:05 [INFO] Executing Step 4: Skipping...
+2024-08-30 17:39:05 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:39:05 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 17:39:05 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:39:05 [INFO] Executing Step 7: ResultValidation
+2024-08-30 17:39:05 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 17:39:05 [INFO] Executing Step 8: ResultParsing
+2024-08-30 17:39:05 [INFO] Question: Que es una pizza?
+2024-08-30 17:39:05 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 17:39:05 [INFO] Prompt ID: faad7b83-26ad-4329-a27f-56b23304d745
+2024-08-30 17:39:05 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 17:39:05 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 17:39:05 [INFO] Executing Step 1: CacheLookup
+2024-08-30 17:39:05 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 17:39:05 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,45425703
+      - -58,35566192
+      - -58,39488189
+    - name: lat
+      type: object
+      samples:
+      - -34,59446916
+      - -34,58411848
+      - -34,591589
+    - name: id
+      type: int64
+      samples:
+      - 1131
+      - 2684
+      - 298
+    - name: nombre
+      type: object
+      samples:
+      - COCO
+      - VELUET
+      - TAIPEI
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - RESTAURANTE
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - "PORTE\xC3\u2018A"
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4325 2785
+      - 4322 9570
+    - name: mail
+      type: object
+      samples:
+      - x1zgl4zazat8@gmail.com
+      - tp2bm4i@yahoo.com
+      - p48foow@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a domingo de 11 a 01
+      - "lunes a s\xE1bado de 9 a 2"
+    - name: calle_nombre
+      type: object
+      samples:
+      - GUEMES
+      - VEGA NICETO Cnel.
+      - FITZ ROY
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1561
+      - 1156
+      - 301
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CORDOBA AV. 1536
+      - VARELA AV. 1157
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Del Parque
+      - Villa Real
+      - Flores
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1039.0
+      - .nan
+      - 1245.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427CDR
+      - C1043AAW
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Que es una pizza?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 17:39:05 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 17:39:05 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:39:05 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,45425703
+      - -58,35566192
+      - -58,39488189
+    - name: lat
+      type: object
+      samples:
+      - -34,59446916
+      - -34,58411848
+      - -34,591589
+    - name: id
+      type: int64
+      samples:
+      - 1131
+      - 2684
+      - 298
+    - name: nombre
+      type: object
+      samples:
+      - COCO
+      - VELUET
+      - TAIPEI
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - RESTAURANTE
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - "PORTE\xC3\u2018A"
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4325 2785
+      - 4322 9570
+    - name: mail
+      type: object
+      samples:
+      - x1zgl4zazat8@gmail.com
+      - tp2bm4i@yahoo.com
+      - p48foow@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a domingo de 11 a 01
+      - "lunes a s\xE1bado de 9 a 2"
+    - name: calle_nombre
+      type: object
+      samples:
+      - GUEMES
+      - VEGA NICETO Cnel.
+      - FITZ ROY
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1561
+      - 1156
+      - 301
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CORDOBA AV. 1536
+      - VARELA AV. 1157
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Del Parque
+      - Villa Real
+      - Flores
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1039.0
+      - .nan
+      - 1245.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427CDR
+      - C1043AAW
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Que es una pizza?
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 17:39:05 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+dfs[0]['ingredientes'].value_counts()
+
+# Declare result var: 
+result = { "type": "dataframe", "value": dfs[0][dfs[0]['ingredientes'] == 'pizza'] }
+            ```
+            
+2024-08-30 17:39:05 [INFO] Executing Step 4: CachePopulation
+2024-08-30 17:39:06 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 17:39:06 [INFO] 
+Code running:
+```
+dfs[0]['ingredientes'].value_counts()
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['ingredientes'] == 'pizza']}
+        ```
+2024-08-30 17:39:06 [INFO] Executing Step 6: CodeExecution
+2024-08-30 17:39:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ingredientes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ingredientes'
+
+2024-08-30 17:39:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-08-30 17:39:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:39:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:39:06 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,45425703
+      - -58,35566192
+      - -58,39488189
+    - name: lat
+      type: object
+      samples:
+      - -34,59446916
+      - -34,58411848
+      - -34,591589
+    - name: id
+      type: int64
+      samples:
+      - 1131
+      - 2684
+      - 298
+    - name: nombre
+      type: object
+      samples:
+      - COCO
+      - VELUET
+      - TAIPEI
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - RESTAURANTE
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - "PORTE\xC3\u2018A"
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4325 2785
+      - 4322 9570
+    - name: mail
+      type: object
+      samples:
+      - x1zgl4zazat8@gmail.com
+      - tp2bm4i@yahoo.com
+      - p48foow@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a domingo de 11 a 01
+      - "lunes a s\xE1bado de 9 a 2"
+    - name: calle_nombre
+      type: object
+      samples:
+      - GUEMES
+      - VEGA NICETO Cnel.
+      - FITZ ROY
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1561
+      - 1156
+      - 301
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CORDOBA AV. 1536
+      - VARELA AV. 1157
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Del Parque
+      - Villa Real
+      - Flores
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1039.0
+      - .nan
+      - 1245.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427CDR
+      - C1043AAW
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ Que es una pizza?
+
+You generated this python code:
+dfs[0]['ingredientes'].value_counts()
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['ingredientes'] == 'pizza']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ingredientes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ingredientes'
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:39:06 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:39:06 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:39:06 [INFO] Prompt used:
+            
+
+### PREVIOUS CONVERSATION
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,45425703
+      - -58,35566192
+      - -58,39488189
+    - name: lat
+      type: object
+      samples:
+      - -34,59446916
+      - -34,58411848
+      - -34,591589
+    - name: id
+      type: int64
+      samples:
+      - 1131
+      - 2684
+      - 298
+    - name: nombre
+      type: object
+      samples:
+      - COCO
+      - VELUET
+      - TAIPEI
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - RESTAURANTE
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - "PORTE\xC3\u2018A"
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4325 2785
+      - 4322 9570
+    - name: mail
+      type: object
+      samples:
+      - x1zgl4zazat8@gmail.com
+      - tp2bm4i@yahoo.com
+      - p48foow@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a domingo de 11 a 01
+      - "lunes a s\xE1bado de 9 a 2"
+    - name: calle_nombre
+      type: object
+      samples:
+      - GUEMES
+      - VEGA NICETO Cnel.
+      - FITZ ROY
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1561
+      - 1156
+      - 301
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CORDOBA AV. 1536
+      - VARELA AV. 1157
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Del Parque
+      - Villa Real
+      - Flores
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1039.0
+      - .nan
+      - 1245.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427CDR
+      - C1043AAW
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ Que es una pizza?
+
+You generated this python code:
+dfs[0]['ingredientes'].value_counts()
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['ingredientes'] == 'pizza']}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ingredientes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ingredientes'
+
+
+Fix the python code above and return the new python code:
+            
+2024-08-30 17:39:06 [INFO] Code generated:
+            ```
+            result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['cocina'].str.contains('pizza', case=False)]}
+            ```
+            
+2024-08-30 17:39:06 [INFO] Executing Step 2: CodeCleaning
+2024-08-30 17:39:06 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['cocina'].str.contains('pizza', case=False)]}
+        ```
+2024-08-30 17:39:06 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ingredientes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ingredientes'
+
+2024-08-30 17:39:06 [WARNING] Failed to execute code retrying with a correction framework [retry number: 2]
+2024-08-30 17:39:06 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-08-30 17:39:06 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-08-30 17:39:07 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,45425703
+      - -58,35566192
+      - -58,39488189
+    - name: lat
+      type: object
+      samples:
+      - -34,59446916
+      - -34,58411848
+      - -34,591589
+    - name: id
+      type: int64
+      samples:
+      - 1131
+      - 2684
+      - 298
+    - name: nombre
+      type: object
+      samples:
+      - COCO
+      - VELUET
+      - TAIPEI
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - RESTAURANTE
+      - PUB
+    - name: cocina
+      type: object
+      samples:
+      - .nan
+      - "PORTE\xC3\u2018A"
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - .nan
+      - "CLASICO PORTE\xD1O"
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4325 2785
+      - 4322 9570
+    - name: mail
+      type: object
+      samples:
+      - x1zgl4zazat8@gmail.com
+      - tp2bm4i@yahoo.com
+      - p48foow@yahoo.com
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a domingo de 11 a 01
+      - "lunes a s\xE1bado de 9 a 2"
+    - name: calle_nombre
+      type: object
+      samples:
+      - GUEMES
+      - VEGA NICETO Cnel.
+      - FITZ ROY
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1561
+      - 1156
+      - 301
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CORDOBA AV. 1536
+      - VARELA AV. 1157
+      - .nan
+    - name: barrio
+      type: object
+      samples:
+      - Villa Del Parque
+      - Villa Real
+      - Flores
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1039.0
+      - .nan
+      - 1245.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1427CDR
+      - C1043AAW
+      - .nan
+
+
+The user asked the following question:
+### QUERY
+ cuenta la cantidad de registros
+### ANSWER
+ 2823
+### QUERY
+ Que es una pizza?
+
+You generated this python code:
+result = {'type': 'dataframe', 'value': dfs[0][dfs[0]['cocina'].str.contains('pizza', case=False)]}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'ingredientes'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'ingredientes'
+
+
+Fix the python code above and return the new python code:
+2024-08-30 17:39:07 [INFO] Executing Step 1: CodeGenerator
+2024-08-30 17:39:07 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 17:39:07 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-08-30 17:39:07 [ERROR] Pipeline failed on step 6: No code found in the response
