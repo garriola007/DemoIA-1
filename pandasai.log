@@ -1,0 +1,227 @@
+2024-08-30 16:46:13 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 16:46:13 [INFO] Question: cuenta la cantidad de registros
+2024-08-30 16:46:13 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 16:46:13 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-08-30 16:46:13 [INFO] Prompt ID: 4a1027dc-bad9-4ee4-945e-af20d9ab9dc1
+2024-08-30 16:46:13 [INFO] Prompt ID: 064a0677-9a6f-427b-b663-1d2203c471d3
+2024-08-30 16:46:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 16:46:13 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-08-30 16:46:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 16:46:13 [INFO] Executing Step 0: ValidatePipelineInput
+2024-08-30 16:46:13 [INFO] Executing Step 1: CacheLookup
+2024-08-30 16:46:13 [INFO] Executing Step 1: CacheLookup
+2024-08-30 16:46:13 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 16:46:13 [INFO] Executing Step 2: PromptGeneration
+2024-08-30 16:46:13 [INFO] Using prompt: <dataframe>
+dfs[0]:2823x18
+long,lat,id,nombre,categoria,cocina,ambientacion,telefono,mail,horario,calle_nombre,calle_altura,calle_cruce,direccion_completa,barrio,comuna,codigo_postal,codigo_postal_argentino
+"-58,3940292","-34,60390931",1200,BEREBER,RESTAURANTE,,,4953 3007,v5xwba75z5@outlook.com,,Salotti,1601,"JUSTO, JUAN B","MITRE, BARTOLOME 790",Colegiales,Comuna 4,,C1028AAP
+"-58,50398651","-34,60111172",2359,LA FAROLA DE STA FE,DELIVERY & TAKE AWAY,JUDIA,MARINA,4800 1112,20inem@outlook.com,lunes a vien de 7 a 21,ESMERALDA,1877,JONTE,,Barracas,Comuna 5,1122.0,C1009ABW
+"-58,48503338","-34,60823882",21,PIOCERY,,PIZZERIA,CHINA,,de8v1z6@gmail.com,lunes a viernes de 12 a 00 - sábado de 20 a 3,MORON,850,,ORTEGA Y GASSET 1777,Parque Chacabuco,Comuna 11,1098.0,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuenta la cantidad de registros
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 16:46:13 [INFO] Using prompt: <dataframe>
+dfs[0]:2823x18
+long,lat,id,nombre,categoria,cocina,ambientacion,telefono,mail,horario,calle_nombre,calle_altura,calle_cruce,direccion_completa,barrio,comuna,codigo_postal,codigo_postal_argentino
+"-58,37830939","-34,6061474",2015,2080 EXPRESS,,,,4394 1256,birktzxt0_3@yahoo.com,lunes a domingo de 7 a 00.30,Otamendi,4661,JONTE,GAONA AV. 3200,Liniers,Comuna 14,1221.0,
+"-58,38611059","-34,59065495",905,CENTURY FOOD,CONFITERIA,ARABE,FOLKLORICO,,gsda_jei@outlook.com,,Bauness,1952,"JUSTO, JUAN B",,Parque Chacabuco,Comuna 7,,C1086AAU
+"-58,47106927","-34,61941552",471,NINA CAFE,RESTAURANTE,MARROQUI,EIGHTIES,4307 0896,njx1qgfng8h@aol.com,lunes a viernes de 11.30 a 16 y de 19.30 a 2,GONCALVES DIAS,1693,,11 DE SEPTIEMBRE DE 1888 3900,Monserrat,Comuna 5,1102.0,C1426CQU
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuenta la cantidad de registros
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-08-30 16:46:13 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 16:46:13 [INFO] Executing Step 3: CodeGenerator
+2024-08-30 16:46:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 16:46:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:2823x18
+long,lat,id,nombre,categoria,cocina,ambientacion,telefono,mail,horario,calle_nombre,calle_altura,calle_cruce,direccion_completa,barrio,comuna,codigo_postal,codigo_postal_argentino
+"-58,3940292","-34,60390931",1200,BEREBER,RESTAURANTE,,,4953 3007,v5xwba75z5@outlook.com,,Salotti,1601,"JUSTO, JUAN B","MITRE, BARTOLOME 790",Colegiales,Comuna 4,,C1028AAP
+"-58,50398651","-34,60111172",2359,LA FAROLA DE STA FE,DELIVERY & TAKE AWAY,JUDIA,MARINA,4800 1112,20inem@outlook.com,lunes a vien de 7 a 21,ESMERALDA,1877,JONTE,,Barracas,Comuna 5,1122.0,C1009ABW
+"-58,48503338","-34,60823882",21,PIOCERY,,PIZZERIA,CHINA,,de8v1z6@gmail.com,lunes a viernes de 12 a 00 - sábado de 20 a 3,MORON,850,,ORTEGA Y GASSET 1777,Parque Chacabuco,Comuna 11,1098.0,
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuenta la cantidad de registros
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 16:46:14 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = {"type": "number", "value": len(dfs[0])}
+            ```
+            
+2024-08-30 16:46:14 [INFO] Executing Step 4: CachePopulation
+2024-08-30 16:46:14 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-08-30 16:46:14 [INFO] Prompt used:
+            
+<dataframe>
+dfs[0]:2823x18
+long,lat,id,nombre,categoria,cocina,ambientacion,telefono,mail,horario,calle_nombre,calle_altura,calle_cruce,direccion_completa,barrio,comuna,codigo_postal,codigo_postal_argentino
+"-58,37830939","-34,6061474",2015,2080 EXPRESS,,,,4394 1256,birktzxt0_3@yahoo.com,lunes a domingo de 7 a 00.30,Otamendi,4661,JONTE,GAONA AV. 3200,Liniers,Comuna 14,1221.0,
+"-58,38611059","-34,59065495",905,CENTURY FOOD,CONFITERIA,ARABE,FOLKLORICO,,gsda_jei@outlook.com,,Bauness,1952,"JUSTO, JUAN B",,Parque Chacabuco,Comuna 7,,C1086AAU
+"-58,47106927","-34,61941552",471,NINA CAFE,RESTAURANTE,MARROQUI,EIGHTIES,4307 0896,njx1qgfng8h@aol.com,lunes a viernes de 11.30 a 16 y de 19.30 a 2,GONCALVES DIAS,1693,,11 DE SEPTIEMBRE DE 1888 3900,Monserrat,Comuna 5,1102.0,C1426CQU
+</dataframe>
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ cuenta la cantidad de registros
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-08-30 16:46:14 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = { "type": "number", "value": len(dfs[0]) }
+            ```
+            
+2024-08-30 16:46:14 [INFO] Executing Step 4: CachePopulation
+2024-08-30 16:46:14 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 16:46:14 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 16:46:14 [INFO] Executing Step 6: CodeExecution
+2024-08-30 16:46:14 [INFO] Executing Step 7: ResultValidation
+2024-08-30 16:46:14 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 16:46:14 [INFO] Executing Step 8: ResultParsing
+2024-08-30 16:46:14 [INFO] Executing Step 5: CodeCleaning
+2024-08-30 16:46:14 [INFO] 
+Code running:
+```
+result = {'type': 'number', 'value': len(dfs[0])}
+        ```
+2024-08-30 16:46:14 [INFO] Executing Step 6: CodeExecution
+2024-08-30 16:46:14 [INFO] Executing Step 7: ResultValidation
+2024-08-30 16:46:14 [INFO] Answer: {'type': 'number', 'value': 2823}
+2024-08-30 16:46:14 [INFO] Executing Step 8: ResultParsing
+2024-08-30 16:46:23 [ERROR] Exception in callback _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell...\web.py:1746>>) at E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\tornado\web.py:2438
+handle: <Handle _HandlerDelegate.execute.<locals>.<lambda>(<Task cancell...\web.py:1746>>) at E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\tornado\web.py:2438>
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\tornado\web.py", line 1746, in _execute
+    async def _execute(
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Users\Gustavo\AppData\Local\Programs\Python\Python39\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\tornado\web.py", line 2438, in <lambda>
+    fut.add_done_callback(lambda f: f.result())
+asyncio.exceptions.CancelledError
