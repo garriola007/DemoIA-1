@@ -30,5 +30,5 @@ st.write(df.chat("cuenta la cantidad de registros"))
 
 consulta = st.text_input('Ingrese consulta')
 st.write("Por ejemplo: lista la tabla ordenada alfabeticamente por nombre")
-if consulta :
+if st.button("Enviar") :
     st.write(df.chat(consulta))

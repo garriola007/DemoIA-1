@@ -1,0 +1,11 @@
+Oferta gastronómica
+Restaurantes, bares y cafeterías de la Ciudad de Buenos Aires
+https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/oferta_gastronomica.csv
+
+Establecimientos Gastronómicos
+Ubicación de los establecimientos gastronómicos inscriptos en el Registro de Prestadores Turísticos de la Ciudad Autónoma de Buenos Aires
+https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/establecimientos_gastronomicos.csv
+
+Permisos de Uso del Espacio Público
+Permisos de uso de espacio público para el área gastronómica otorgados por la Ciudad. Incluye información del titular, expediente, disposición e información geográfica de la ubicación del puesto.
+https://cdn.buenosaires.gob.ar/datosabiertos/datasets/atencion-ciudadana/permisos-uso-espacio-publico-area-gastronomica/permisos-uso-espacio-publico-gastronomicos.csv
