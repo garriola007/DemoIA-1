@@ -1,4 +1,4 @@
 import streamlit as st
 
-hola
+st.write("hola")
 
