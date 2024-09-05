@@ -10124,3 +10124,1622 @@ result = {'type': 'dataframe', 'value': dfs[0].sort_values(by='nombre')}
 
 [2823 rows x 18 columns]}
 2024-08-30 18:01:06 [INFO] Executing Step 8: ResultParsing
+2024-09-02 07:59:41 [INFO] Question: Listado ordenado alfabeticamente 
+2024-09-02 07:59:42 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-09-02 07:59:42 [INFO] Prompt ID: 19cefd4d-2abf-4ad1-9a2e-22cfc5a0b011
+2024-09-02 07:59:42 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-02 07:59:43 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-02 07:59:43 [INFO] Executing Step 1: CacheLookup
+2024-09-02 07:59:43 [INFO] Executing Step 2: PromptGeneration
+2024-09-02 07:59:43 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38828526
+      - -58,39534823
+      - -58,3816141
+    - name: lat
+      type: object
+      samples:
+      - -34,59398075
+      - -34,58416605
+      - -34,64208772
+    - name: id
+      type: int64
+      samples:
+      - 2162
+      - 1213
+      - 2637
+    - name: nombre
+      type: object
+      samples:
+      - TAJO
+      - MARIA MARIA
+      - FREDU II
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CONFITERIA
+      - CAFE
+    - name: cocina
+      type: object
+      samples:
+      - AMERICANA
+      - .nan
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - LITERARIO
+      - AMERICANO
+    - name: telefono
+      type: object
+      samples:
+      - 4832 1313
+      - .nan
+      - 4822 9239
+    - name: mail
+      type: object
+      samples:
+      - 1jp-8ycor5@aol.com
+      - aqpksze2g1u1@aol.com
+      - dpan9aozm@protonmail.com
+    - name: horario
+      type: object
+      samples:
+      - "lunes a viernes de 7 a 1 - s\xE1bado de 10 a 2 - domingo de 12 a 1"
+      - "lunes a s\xE1bado de 12 a 16.20 y de 20 a 2 - domingo de 12 a 17"
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - CAMARGO
+      - MARMOL JOSE
+      - URIBURU
+    - name: calle_altura
+      type: int64
+      samples:
+      - 2914
+      - 1314
+      - 1343
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - JONTE
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - IRIGOYEN, BERNARDO de 82
+      - JUNIN 1749
+    - name: barrio
+      type: object
+      samples:
+      - Almagro
+      - Floresta
+      - Belgrano
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 13
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1004.0
+      - .nan
+      - 1238.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1416BTW
+      - C1428DHK
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-02 07:59:43 [INFO] Executing Step 3: CodeGenerator
+2024-09-02 07:59:45 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-02 07:59:45 [INFO] Prompt used:
+            
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,38828526
+      - -58,39534823
+      - -58,3816141
+    - name: lat
+      type: object
+      samples:
+      - -34,59398075
+      - -34,58416605
+      - -34,64208772
+    - name: id
+      type: int64
+      samples:
+      - 2162
+      - 1213
+      - 2637
+    - name: nombre
+      type: object
+      samples:
+      - TAJO
+      - MARIA MARIA
+      - FREDU II
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CONFITERIA
+      - CAFE
+    - name: cocina
+      type: object
+      samples:
+      - AMERICANA
+      - .nan
+      - ARMENIA
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - LITERARIO
+      - AMERICANO
+    - name: telefono
+      type: object
+      samples:
+      - 4832 1313
+      - .nan
+      - 4822 9239
+    - name: mail
+      type: object
+      samples:
+      - 1jp-8ycor5@aol.com
+      - aqpksze2g1u1@aol.com
+      - dpan9aozm@protonmail.com
+    - name: horario
+      type: object
+      samples:
+      - "lunes a viernes de 7 a 1 - s\xE1bado de 10 a 2 - domingo de 12 a 1"
+      - "lunes a s\xE1bado de 12 a 16.20 y de 20 a 2 - domingo de 12 a 17"
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - CAMARGO
+      - MARMOL JOSE
+      - URIBURU
+    - name: calle_altura
+      type: int64
+      samples:
+      - 2914
+      - 1314
+      - 1343
+    - name: calle_cruce
+      type: object
+      samples:
+      - .nan
+      - JONTE
+      - DONADO
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - IRIGOYEN, BERNARDO de 82
+      - JUNIN 1749
+    - name: barrio
+      type: object
+      samples:
+      - Almagro
+      - Floresta
+      - Belgrano
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 2
+      - Comuna 7
+      - Comuna 13
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1004.0
+      - .nan
+      - 1238.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1416BTW
+      - C1428DHK
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente 
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-09-02 07:59:45 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+dfs = [
+  pd.DataFrame({
+    "long": [-58.38828526, -58.39534823, -58.3816141],
+    "lat": [-34.59398075, -34.58416605, -34.64208772],
+    "id": [2162, 1213, 2637],
+    "nombre": ["TAJO", "MARIA MARIA", "FREDU II"],
+    "categoria": [None, "CONFITERIA", "CAFE"],
+    "cocina": ["AMERICANA", None, "ARMENIA"],
+    "ambientacion": [None, "LITERARIO", "AMERICANO"],
+    "telefono": ["4832 1313", None, "4822 9239"],
+    "mail": ["1jp-8ycor5@aol.com", "aqpksze2g1u1@aol.com", "dpan9aozm@protonmail.com"],
+    "horario": ["lunes a viernes de 7 a 1 - sábado de 10 a 2 - domingo de 12 a 1", "lunes a sábado de 12 a 16.20 y de 20 a 2 - domingo de 12 a 17", None],
+    "calle_nombre": ["CAMARGO", "MARMOL JOSE", "URIBURU"],
+    "calle_altura": [2914, 1314, 1343],
+    "calle_cruce": [None, "JONTE", "DONADO"],
+    "direccion_completa": [None, "IRIGOYEN, BERNARDO de 82", "JUNIN 1749"],
+    "barrio": ["Almagro", "Floresta", "Belgrano"],
+    "comuna": ["Comuna 2", "Comuna 7", "Comuna 13"],
+    "codigo_postal": [1004.0, None, 1238.0],
+    "codigo_postal_argentino": [None, "C1416BTW", "C1428DHK"]
+  })
+]
+
+# Sort the dataframe by the 'nombre' column
+dfs[0] = dfs[0].sort_values(by="nombre")
+
+# Declare result var
+result = {
+  "type": "dataframe",
+  "value": dfs[0]
+}
+            ```
+            
+2024-09-02 07:59:45 [INFO] Executing Step 4: CachePopulation
+2024-09-02 07:59:45 [INFO] Executing Step 5: CodeCleaning
+2024-09-02 07:59:45 [INFO] 
+Code running:
+```
+dfs[0] = dfs[0].sort_values(by='nombre')
+result = {'type': 'dataframe', 'value': dfs[0]}
+        ```
+2024-09-02 07:59:45 [INFO] Executing Step 6: CodeExecution
+2024-09-02 07:59:45 [INFO] Executing Step 7: ResultValidation
+2024-09-02 07:59:45 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+5     -58,42226235   -34,5718432     3        4 X 4 CAFE  ...        Palermo  Comuna 14        1425.0                C1425ABY
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2817  -58,37390199  -34,60168838  2545          ZEPELLIN  ...    San Nicolas   Comuna 1        1004.0                C1004AAK
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃƒÂ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+
+[2823 rows x 18 columns]}
+2024-09-02 07:59:45 [INFO] Executing Step 8: ResultParsing
+2024-09-02 08:00:23 [INFO] Question: Listado ordenado alfabeticamente por  categoria
+2024-09-02 08:00:23 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-09-02 08:00:23 [INFO] Prompt ID: 0f0e3403-1a5e-4a18-bb91-f6e6508929d5
+2024-09-02 08:00:23 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-02 08:00:23 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-02 08:00:23 [INFO] Executing Step 1: CacheLookup
+2024-09-02 08:00:23 [INFO] Executing Step 2: PromptGeneration
+2024-09-02 08:00:23 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,37336886
+      - -58,36248263
+      - -58,45254269
+    - name: lat
+      type: object
+      samples:
+      - -34,57999285
+      - -34,60069804
+      - -34,62235496
+    - name: id
+      type: int64
+      samples:
+      - 320
+      - 1240
+      - 1676
+    - name: nombre
+      type: object
+      samples:
+      - FOJA CERO
+      - TIEMPO LIBRE
+      - ZAKATE
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CAFE
+      - DELIVERY & TAKE AWAY
+    - name: cocina
+      type: object
+      samples:
+      - URUGUAYA
+      - CONTEMPORANEA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - JUEGOS DE AZAR
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4861 0041
+      - 4774 4191
+    - name: mail
+      type: object
+      samples:
+      - ewimy65yxkn2@icloud.com
+      - 2erev69ad@yahoo.com
+      - ba9bqxrtut@outlook.com
+    - name: horario
+      type: object
+      samples:
+      - "lunes a s\xE1bado de 19 a 7"
+      - .nan
+      - "lunes a s\xE1bado de 12 a 15 y de 20 a 00"
+    - name: calle_nombre
+      type: object
+      samples:
+      - CORRIENTES
+      - FRENCH
+      - BOEDO
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1496
+      - 580
+      - 1672
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - GUIDO 1705
+      - PINO, Virrey del 2448
+    - name: barrio
+      type: object
+      samples:
+      - Boca
+      - Villa Real
+      - Villa Riachuelo
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 8
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1425.0
+      - 1293.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1116ABJ
+      - C1172ACH
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente por  categoria
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-02 08:00:23 [INFO] Executing Step 3: CodeGenerator
+2024-09-02 08:00:25 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-02 08:00:25 [INFO] Prompt used:
+            
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,37336886
+      - -58,36248263
+      - -58,45254269
+    - name: lat
+      type: object
+      samples:
+      - -34,57999285
+      - -34,60069804
+      - -34,62235496
+    - name: id
+      type: int64
+      samples:
+      - 320
+      - 1240
+      - 1676
+    - name: nombre
+      type: object
+      samples:
+      - FOJA CERO
+      - TIEMPO LIBRE
+      - ZAKATE
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CAFE
+      - DELIVERY & TAKE AWAY
+    - name: cocina
+      type: object
+      samples:
+      - URUGUAYA
+      - CONTEMPORANEA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - JUEGOS DE AZAR
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4861 0041
+      - 4774 4191
+    - name: mail
+      type: object
+      samples:
+      - ewimy65yxkn2@icloud.com
+      - 2erev69ad@yahoo.com
+      - ba9bqxrtut@outlook.com
+    - name: horario
+      type: object
+      samples:
+      - "lunes a s\xE1bado de 19 a 7"
+      - .nan
+      - "lunes a s\xE1bado de 12 a 15 y de 20 a 00"
+    - name: calle_nombre
+      type: object
+      samples:
+      - CORRIENTES
+      - FRENCH
+      - BOEDO
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1496
+      - 580
+      - 1672
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - GUIDO 1705
+      - PINO, Virrey del 2448
+    - name: barrio
+      type: object
+      samples:
+      - Boca
+      - Villa Real
+      - Villa Riachuelo
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 8
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1425.0
+      - 1293.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1116ABJ
+      - C1172ACH
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente por  categoria
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-09-02 08:00:25 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+dfs = [
+  {
+    "name": "restaurants",
+    "description": "DataFrame with restaurants information",
+    "type": pd.DataFrame,
+    "rows": 2823,
+    "columns": 18,
+    "schema": {
+      "fields": [
+        {"name": "long", "type": "object", "samples": [-58.37336886, -58.36248263, -58.45254269]},
+        {"name": "lat", "type": "object", "samples": [-34.57999285, -34.60069804, -34.62235496]},
+        {"name": "id", "type": "int64", "samples": [320, 1240, 1676]},
+        {"name": "nombre", "type": "object", "samples": ["FOJA CERO", "TIEMPO LIBRE", "ZAKATE"]},
+        {"name": "categoria", "type": "object", "samples": [None, "CAFE", "DELIVERY & TAKE AWAY"]},
+        {"name": "cocina", "type": "object", "samples": ["URUGUAYA", "CONTEMPORANEA", None]},
+        {"name": "ambientacion", "type": "object", "samples": ["FUTBOL", "JUEGOS DE AZAR", None]},
+        {"name": "telefono", "type": "object", "samples": [None, "4861 0041", "4774 4191"]},
+        {"name": "mail", "type": "object", "samples": ["ewimy65yxkn2@icloud.com", "2erev69ad@yahoo.com", "ba9bqxrtut@outlook.com"]},
+        {"name": "horario", "type": "object", "samples": ["lunes a sábado de 19 a 7", None, "lunes a sábado de 12 a 15 y de 20 a 00"]},
+        {"name": "calle_nombre", "type": "object", "samples": ["CORRIENTES", "FRENCH", "BOEDO"]},
+        {"name": "calle_altura", "type": "int64", "samples": [1496, 580, 1672]},
+        {"name": "calle_cruce", "type": "object", "samples": ["JUSTO, JUAN B", "ALCORTA", None]},
+        {"name": "direccion_completa", "type": "object", "samples": [None, "GUIDO 1705", "PINO, Virrey del 2448"]},
+        {"name": "barrio", "type": "object", "samples": ["Boca", "Villa Real", "Villa Riachuelo"]},
+        {"name": "comuna", "type": "object", "samples": ["Comuna 12", "Comuna 8", "Comuna 1"]},
+        {"name": "codigo_postal", "type": "float64", "samples": [None, 1425.0, 1293.0]},
+        {"name": "codigo_postal_argentino", "type": "object", "samples": [None, "C1116ABJ", "C1172ACH"]}
+      ]
+    }
+  }
+]
+
+# Sort restaurants by category
+restaurants_sorted = dfs[0]['value'].sort_values(by='categoria')
+
+# Declare result var
+result = {
+  "type": "dataframe",
+  "value": restaurants_sorted
+}
+            ```
+            
+2024-09-02 08:00:25 [INFO] Executing Step 4: CachePopulation
+2024-09-02 08:00:25 [INFO] Executing Step 5: CodeCleaning
+2024-09-02 08:00:25 [INFO] 
+Code running:
+```
+restaurants_sorted = dfs[0]['value'].sort_values(by='categoria')
+result = {'type': 'dataframe', 'value': restaurants_sorted}
+        ```
+2024-09-02 08:00:25 [INFO] Executing Step 6: CodeExecution
+2024-09-02 08:00:26 [ERROR] Failed with error: Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'value'
+
+2024-09-02 08:00:26 [WARNING] Failed to execute code retrying with a correction framework [retry number: 1]
+2024-09-02 08:00:26 [INFO] Executing Pipeline: ErrorCorrectionPipeline
+2024-09-02 08:00:26 [INFO] Executing Step 0: ErrorPromptGeneration
+2024-09-02 08:00:26 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,37336886
+      - -58,36248263
+      - -58,45254269
+    - name: lat
+      type: object
+      samples:
+      - -34,57999285
+      - -34,60069804
+      - -34,62235496
+    - name: id
+      type: int64
+      samples:
+      - 320
+      - 1240
+      - 1676
+    - name: nombre
+      type: object
+      samples:
+      - FOJA CERO
+      - TIEMPO LIBRE
+      - ZAKATE
+    - name: categoria
+      type: object
+      samples:
+      - .nan
+      - CAFE
+      - DELIVERY & TAKE AWAY
+    - name: cocina
+      type: object
+      samples:
+      - URUGUAYA
+      - CONTEMPORANEA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - FUTBOL
+      - JUEGOS DE AZAR
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4861 0041
+      - 4774 4191
+    - name: mail
+      type: object
+      samples:
+      - ewimy65yxkn2@icloud.com
+      - 2erev69ad@yahoo.com
+      - ba9bqxrtut@outlook.com
+    - name: horario
+      type: object
+      samples:
+      - "lunes a s\xE1bado de 19 a 7"
+      - .nan
+      - "lunes a s\xE1bado de 12 a 15 y de 20 a 00"
+    - name: calle_nombre
+      type: object
+      samples:
+      - CORRIENTES
+      - FRENCH
+      - BOEDO
+    - name: calle_altura
+      type: int64
+      samples:
+      - 1496
+      - 580
+      - 1672
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - ALCORTA
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - GUIDO 1705
+      - PINO, Virrey del 2448
+    - name: barrio
+      type: object
+      samples:
+      - Boca
+      - Villa Real
+      - Villa Riachuelo
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 12
+      - Comuna 8
+      - Comuna 1
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1425.0
+      - 1293.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - .nan
+      - C1116ABJ
+      - C1172ACH
+
+
+The user asked the following question:
+### QUERY
+ Listado ordenado alfabeticamente por  categoria
+
+You generated this python code:
+restaurants_sorted = dfs[0]['value'].sort_values(by='categoria')
+result = {'type': 'dataframe', 'value': restaurants_sorted}
+
+It fails with the following error:
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3791, in get_loc
+    return self._engine.get_loc(casted_key)
+  File "index.pyx", line 152, in pandas._libs.index.IndexEngine.get_loc
+  File "index.pyx", line 181, in pandas._libs.index.IndexEngine.get_loc
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7080, in pandas._libs.hashtable.PyObjectHashTable.get_item
+  File "pandas\_libs\hashtable_class_helper.pxi", line 7088, in pandas._libs.hashtable.PyObjectHashTable.get_item
+KeyError: 'value'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 87, in execute
+    result = self.execute_code(input, code_context)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandasai\pipelines\chat\code_execution.py", line 172, in execute_code
+    exec(code, environment)
+  File "<string>", line 1, in <module>
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\frame.py", line 3893, in __getitem__
+    indexer = self.columns.get_loc(key)
+  File "E:\desarrollo\GitHub\DemoIA-1\lib\site-packages\pandas\core\indexes\base.py", line 3798, in get_loc
+    raise KeyError(key) from err
+KeyError: 'value'
+
+
+Fix the python code above and return the new python code:
+2024-09-02 08:00:26 [INFO] Executing Step 1: CodeGenerator
+2024-09-02 08:00:26 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-02 08:00:26 [ERROR] Pipeline failed on step 1: No code found in the response
+2024-09-02 08:00:26 [ERROR] Pipeline failed on step 6: No code found in the response
+2024-09-02 08:00:38 [INFO] Question: Listado ordenado alfabeticamente
+2024-09-02 08:00:38 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-09-02 08:00:38 [INFO] Prompt ID: c65006a4-e94f-46ac-b16c-be0e8d22a9a6
+2024-09-02 08:00:38 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-02 08:00:38 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-02 08:00:38 [INFO] Executing Step 1: CacheLookup
+2024-09-02 08:00:38 [INFO] Executing Step 2: PromptGeneration
+2024-09-02 08:00:38 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,47435562
+      - -58,39528259
+      - -58,37350136
+    - name: lat
+      type: object
+      samples:
+      - -34,56816538
+      - -34,59723312
+      - -34,64804086
+    - name: id
+      type: int64
+      samples:
+      - 195
+      - 662
+      - 1839
+    - name: nombre
+      type: object
+      samples:
+      - LA NUEVA VEREDA
+      - LOS TULUMBANOS
+      - Kentucky
+    - name: categoria
+      type: object
+      samples:
+      - DELIVERY & TAKE AWAY
+      - .nan
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - AFRODISIACA
+      - PARRILLA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - POP
+      - "ESPA\xD1OL"
+    - name: telefono
+      type: object
+      samples:
+      - 4831 459
+      - 4393 0684
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - www.penelopepacena.com.ar
+      - www.demetria.com.ar
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a viernes de 8 a 19.30
+      - "jueves. viernes. s\xE1bado y preferiado de 19 a 4"
+    - name: calle_nombre
+      type: object
+      samples:
+      - MALABIA
+      - RIO CUARTO
+      - Dorrego
+    - name: calle_altura
+      type: int64
+      samples:
+      - 5587
+      - 1759
+      - 1988
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - .nan
+      - JONTE
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - ARMENIA 1880
+      - SARMIENTO 2108
+    - name: barrio
+      type: object
+      samples:
+      - Balvanera
+      - San Cristobal
+      - Monserrat
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 13
+      - Comuna 2
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1293.0
+      - 1220.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1098AAH
+      - C1041AAK
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-02 08:00:38 [INFO] Executing Step 3: CodeGenerator
+2024-09-02 08:00:38 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-02 08:00:38 [INFO] Prompt used:
+            
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,47435562
+      - -58,39528259
+      - -58,37350136
+    - name: lat
+      type: object
+      samples:
+      - -34,56816538
+      - -34,59723312
+      - -34,64804086
+    - name: id
+      type: int64
+      samples:
+      - 195
+      - 662
+      - 1839
+    - name: nombre
+      type: object
+      samples:
+      - LA NUEVA VEREDA
+      - LOS TULUMBANOS
+      - Kentucky
+    - name: categoria
+      type: object
+      samples:
+      - DELIVERY & TAKE AWAY
+      - .nan
+      - CONFITERIA
+    - name: cocina
+      type: object
+      samples:
+      - AFRODISIACA
+      - PARRILLA
+      - .nan
+    - name: ambientacion
+      type: object
+      samples:
+      - .nan
+      - POP
+      - "ESPA\xD1OL"
+    - name: telefono
+      type: object
+      samples:
+      - 4831 459
+      - 4393 0684
+      - .nan
+    - name: mail
+      type: object
+      samples:
+      - www.penelopepacena.com.ar
+      - www.demetria.com.ar
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - .nan
+      - lunes a viernes de 8 a 19.30
+      - "jueves. viernes. s\xE1bado y preferiado de 19 a 4"
+    - name: calle_nombre
+      type: object
+      samples:
+      - MALABIA
+      - RIO CUARTO
+      - Dorrego
+    - name: calle_altura
+      type: int64
+      samples:
+      - 5587
+      - 1759
+      - 1988
+    - name: calle_cruce
+      type: object
+      samples:
+      - JUSTO, JUAN B
+      - .nan
+      - JONTE
+    - name: direccion_completa
+      type: object
+      samples:
+      - .nan
+      - ARMENIA 1880
+      - SARMIENTO 2108
+    - name: barrio
+      type: object
+      samples:
+      - Balvanera
+      - San Cristobal
+      - Monserrat
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 13
+      - Comuna 2
+      - Comuna 3
+    - name: codigo_postal
+      type: float64
+      samples:
+      - .nan
+      - 1293.0
+      - 1220.0
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1098AAH
+      - C1041AAK
+      - .nan
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-09-02 08:00:38 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = {"type": "dataframe", "value": dfs[0].sort_values(by='nombre')}
+            ```
+            
+2024-09-02 08:00:38 [INFO] Executing Step 4: CachePopulation
+2024-09-02 08:00:39 [INFO] Executing Step 5: CodeCleaning
+2024-09-02 08:00:39 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].sort_values(by='nombre')}
+        ```
+2024-09-02 08:00:39 [INFO] Executing Step 6: CodeExecution
+2024-09-02 08:00:39 [INFO] Executing Step 7: ResultValidation
+2024-09-02 08:00:39 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+5     -58,42226235   -34,5718432     3        4 X 4 CAFE  ...        Palermo  Comuna 14        1425.0                C1425ABY
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2817  -58,37390199  -34,60168838  2545          ZEPELLIN  ...    San Nicolas   Comuna 1        1004.0                C1004AAK
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃƒÂ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+
+[2823 rows x 18 columns]}
+2024-09-02 08:00:39 [INFO] Executing Step 8: ResultParsing
+2024-09-02 08:00:56 [INFO] Question: Listado ordenado alfabeticamente por cocina
+2024-09-02 08:00:56 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-09-02 08:00:56 [INFO] Prompt ID: 0125c3a1-5be1-4c0c-93f4-374c42938ffc
+2024-09-02 08:00:56 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-02 08:00:56 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-02 08:00:56 [INFO] Executing Step 1: CacheLookup
+2024-09-02 08:00:56 [INFO] Executing Step 2: PromptGeneration
+2024-09-02 08:00:56 [INFO] Using prompt: dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39514204
+      - -58,37827056
+      - -58,37049625
+    - name: lat
+      type: object
+      samples:
+      - -34,63195715
+      - -34,62352603
+      - -34,60335862
+    - name: id
+      type: int64
+      samples:
+      - 2568
+      - 200
+      - 2612
+    - name: nombre
+      type: object
+      samples:
+      - ESTACION PUEBLO
+      - GRAN VICTORIA
+      - DAYKIRY
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - SANDWICHERIA
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - MODERNO
+      - .nan
+      - TENEDOR LIBRE
+    - name: ambientacion
+      type: object
+      samples:
+      - GRIEGA
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4963 6931
+      - 4325 2785
+    - name: mail
+      type: object
+      samples:
+      - www.lasnazarenas.com.ar
+      - www.elgorriti.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 7 a 21
+      - "domingo a jueves de 7 a 3 - viernes y s\xE1bado de 7 a 5"
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - COMBATE DE LOS POZOS
+      - SAN LORENZO
+      - BELGRANO AV
+    - name: calle_altura
+      type: int64
+      samples:
+      - 3909
+      - 2116
+      - 7400
+    - name: calle_cruce
+      type: object
+      samples:
+      - JONTE
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CHACABUCO 1314
+      - .nan
+      - ALVAREZ THOMAS AV. 1384
+    - name: barrio
+      type: object
+      samples:
+      - Parque Patricios
+      - Velez Sarsfield
+      - Villa Santa Rita
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 4
+      - Comuna 6
+      - Comuna 2
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1295.0
+      - 1124.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1060AAD
+      - .nan
+      - C1042AAB
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente por cocina
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+2024-09-02 08:00:56 [INFO] Executing Step 3: CodeGenerator
+2024-09-02 08:00:58 [INFO] HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2024-09-02 08:00:58 [INFO] Prompt used:
+            
+dfs[0]:
+  name: null
+  description: null
+  type: pd.DataFrame
+  rows: 2823
+  columns: 18
+  schema:
+    fields:
+    - name: long
+      type: object
+      samples:
+      - -58,39514204
+      - -58,37827056
+      - -58,37049625
+    - name: lat
+      type: object
+      samples:
+      - -34,63195715
+      - -34,62352603
+      - -34,60335862
+    - name: id
+      type: int64
+      samples:
+      - 2568
+      - 200
+      - 2612
+    - name: nombre
+      type: object
+      samples:
+      - ESTACION PUEBLO
+      - GRAN VICTORIA
+      - DAYKIRY
+    - name: categoria
+      type: object
+      samples:
+      - VINERIA
+      - SANDWICHERIA
+      - .nan
+    - name: cocina
+      type: object
+      samples:
+      - MODERNO
+      - .nan
+      - TENEDOR LIBRE
+    - name: ambientacion
+      type: object
+      samples:
+      - GRIEGA
+      - AMERICANO
+      - .nan
+    - name: telefono
+      type: object
+      samples:
+      - .nan
+      - 4963 6931
+      - 4325 2785
+    - name: mail
+      type: object
+      samples:
+      - www.lasnazarenas.com.ar
+      - www.elgorriti.com
+      - .nan
+    - name: horario
+      type: object
+      samples:
+      - lunes a domingo de 7 a 21
+      - "domingo a jueves de 7 a 3 - viernes y s\xE1bado de 7 a 5"
+      - .nan
+    - name: calle_nombre
+      type: object
+      samples:
+      - COMBATE DE LOS POZOS
+      - SAN LORENZO
+      - BELGRANO AV
+    - name: calle_altura
+      type: int64
+      samples:
+      - 3909
+      - 2116
+      - 7400
+    - name: calle_cruce
+      type: object
+      samples:
+      - JONTE
+      - posadas
+      - .nan
+    - name: direccion_completa
+      type: object
+      samples:
+      - CHACABUCO 1314
+      - .nan
+      - ALVAREZ THOMAS AV. 1384
+    - name: barrio
+      type: object
+      samples:
+      - Parque Patricios
+      - Velez Sarsfield
+      - Villa Santa Rita
+    - name: comuna
+      type: object
+      samples:
+      - Comuna 4
+      - Comuna 6
+      - Comuna 2
+    - name: codigo_postal
+      type: float64
+      samples:
+      - 1295.0
+      - 1124.0
+      - .nan
+    - name: codigo_postal_argentino
+      type: object
+      samples:
+      - C1060AAD
+      - .nan
+      - C1042AAB
+
+
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Listado ordenado alfabeticamente por cocina
+
+Variable `dfs: list[pd.DataFrame]` is already declared.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+If you are asked to plot a chart, use "matplotlib" for charts, save as png.
+
+
+Generate python code and return full updated code:
+            
+2024-09-02 08:00:58 [INFO] Code generated:
+            ```
+            # TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+result = { "type": "dataframe", "value": dfs[0].sort_values(by='cocina') }
+            ```
+            
+2024-09-02 08:00:58 [INFO] Executing Step 4: CachePopulation
+2024-09-02 08:00:58 [INFO] Executing Step 5: CodeCleaning
+2024-09-02 08:00:58 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].sort_values(by='cocina')}
+        ```
+2024-09-02 08:00:58 [INFO] Executing Step 6: CodeExecution
+2024-09-02 08:00:58 [INFO] Executing Step 7: ResultValidation
+2024-09-02 08:00:58 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id  ...     comuna codigo_postal codigo_postal_argentino
+2086  -58,43488562  -34,58925333   363  ...  Comuna 14        1414.0                C1414DAL
+15    -58,37445146  -34,60214078  2095  ...   Comuna 1        1047.0                C1047AAK
+2080  -58,43646322  -34,58587824   360  ...  Comuna 14        1414.0                C1414CTM
+368   -58,37328879  -34,63949435   897  ...   Comuna 4        1267.0                C1267AEI
+2638  -58,36635403  -34,60972011  1630  ...   Comuna 1        1107.0                C1107AAV
+...            ...           ...   ...  ...        ...           ...                     ...
+2764  -58,52159547  -34,62450448  1479  ...  Comuna 10        1408.0                C1408CPL
+2775  -58,42874586  -34,60248552   673  ...   Comuna 5        1195.0                C1195AAR
+2812  -58,46259904  -34,62873287  1208  ...   Comuna 7        1406.0                C1406GLL
+2814  -58,39863109  -34,60224378   891  ...   Comuna 3        1051.0                C1051ACB
+2815  -58,39436809  -34,60455503   892  ...   Comuna 3        1045.0                C1045AAO
+
+[2823 rows x 18 columns]}
+2024-09-02 08:00:58 [INFO] Executing Step 8: ResultParsing
+2024-09-05 16:04:03 [INFO] Question: lista la tabla ordenada alfabeticamente por nombre
+2024-09-05 16:04:03 [INFO] Running PandasAI with langchain_groq-chat LLM...
+2024-09-05 16:04:03 [INFO] Prompt ID: dc71d57d-fc4b-4d50-bac7-090b71804831
+2024-09-05 16:04:03 [INFO] Executing Pipeline: GenerateChatPipeline
+2024-09-05 16:04:03 [INFO] Executing Step 0: ValidatePipelineInput
+2024-09-05 16:04:03 [INFO] Executing Step 1: CacheLookup
+2024-09-05 16:04:04 [INFO] Using cached response
+2024-09-05 16:04:04 [INFO] Executing Step 2: PromptGeneration
+2024-09-05 16:04:04 [INFO] Executing Step 2: Skipping...
+2024-09-05 16:04:04 [INFO] Executing Step 3: CodeGenerator
+2024-09-05 16:04:04 [INFO] Executing Step 3: Skipping...
+2024-09-05 16:04:04 [INFO] Executing Step 4: CachePopulation
+2024-09-05 16:04:04 [INFO] Executing Step 4: Skipping...
+2024-09-05 16:04:04 [INFO] Executing Step 5: CodeCleaning
+2024-09-05 16:04:04 [INFO] 
+Code running:
+```
+result = {'type': 'dataframe', 'value': dfs[0].sort_values(by='nombre')}
+        ```
+2024-09-05 16:04:04 [INFO] Executing Step 6: CodeExecution
+2024-09-05 16:04:04 [INFO] Executing Step 7: ResultValidation
+2024-09-05 16:04:04 [INFO] Answer: {'type': 'dataframe', 'value':               long           lat    id            nombre  ...         barrio     comuna codigo_postal codigo_postal_argentino
+1     -58,39232963  -34,62155353   676   1843 VINACOTECA  ...  San Cristobal   Comuna 3           NaN                     NaN
+2     -58,45354227  -34,56031135   487      2080 EXPRESS  ...       Belgrano  Comuna 13        1428.0                C1428DNH
+3     -58,47549105   -34,6770507  2737                22  ...   Villa Lugano   Comuna 8        1439.0                C1439FTB
+4      -58,4254372  -34,58569501     2          4 EN 2 I  ...        Palermo  Comuna 14        1425.0                C1425FFA
+5     -58,42226235   -34,5718432     3        4 X 4 CAFE  ...        Palermo  Comuna 14        1425.0                C1425ABY
+...            ...           ...   ...               ...  ...            ...        ...           ...                     ...
+2817  -58,37390199  -34,60168838  2545          ZEPELLIN  ...    San Nicolas   Comuna 1        1004.0                C1004AAK
+2818  -58,40110747   -34,5996429   893  ZOE PIZZA & CAFE  ...      Balvanera   Comuna 3        1029.0                C1029AAP
+2819  -58,38637192  -34,60717761  2546             ZOMBI  ...    San Nicolas   Comuna 1        1015.0                C1015ABD
+2820  -58,46310827  -34,54336919  1521              ZONA  ...       NuÃƒÂ±ez  Comuna 13        1429.0                C1429BIV
+2821  -58,39569675  -34,60221271   894           ZOO BAR  ...      Balvanera   Comuna 3        1050.0                C1050AAP
+
+[2823 rows x 18 columns]}
+2024-09-05 16:04:04 [INFO] Executing Step 8: ResultParsing

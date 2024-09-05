@@ -1,9 +1,14 @@
 import streamlit as st
 import pandas as pd
+import urllib.request
+
+url = "https://cdn.buenosaires.gob.ar/datosabiertos/datasets/ente-de-turismo/oferta-establecimientos-gastronomicos/oferta_gastronomica.csv"
+nombre_archivo = "oferta_gastronomica.csv"
+urllib.request.urlretrieve(url, nombre_archivo)
 
 st.write("Demo IA para Aldo ")
 
-data = pd.read_csv("content/gastronimiaCABA.csv")
+data = pd.read_csv(nombre_archivo)
 data.head()
 
 st.dataframe(data)
