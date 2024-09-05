@@ -8,7 +8,7 @@ urllib.request.urlretrieve(url, nombre_archivo)
 
 st.write("Demo IA para Aldo ")
 
-data = pd.read_csv(nombre_archivo)
+data = pd.read_csv("oferta_gastronomica.csv", encoding ="latin1", sep=";")
 data.head()
 
 st.dataframe(data)
